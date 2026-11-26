@@ -95,7 +95,7 @@ app.post("/api/contact", async(req, res) => {
             });
         }
 
-        if (!data ? .id) {
+        if (!data || !data.id) {
             return res.status(502).json({
                 success: false,
                 message: "Email delivery could not be confirmed.",
