@@ -273,7 +273,7 @@ export function Button({
 /* ---------------- page meta ---------------- */
 export function usePageMeta(title: string, description?: string) {
   useEffect(() => {
-    document.title = title;
+    document.title = "Wordsmith Squad";
     if (description) {
       const tag = document.querySelector('meta[name="description"]');
       if (tag) tag.setAttribute("content", description);

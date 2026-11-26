@@ -260,36 +260,7 @@ export function TrailerPlayer({
           </div>
           <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-30 h-[3.4cqw] bg-black" />
 
-          {/* poster state */}
-          {!started && (
-            <button
-              onClick={play}
-              onPointerEnter={() => setArmed(true)}
-              onFocus={() => setArmed(true)}
-              aria-label="Play the Wordsmith Squad trailer"
-              className="group absolute inset-0 z-40 flex cursor-pointer flex-col items-center justify-center gap-[1.6cqw] bg-ink-950/35 transition-colors hover:bg-ink-950/20"
-            >
-              <span className="relative flex items-center justify-center" style={{ width: "max(64px, 9cqw)", height: "max(64px, 9cqw)" }}>
-                <span className="absolute inset-0 animate-ping rounded-full bg-gold/35" />
-                <span className="absolute -inset-[0.9cqw] rounded-full border border-gold/40" />
-                <span className="relative flex h-full w-full items-center justify-center rounded-full bg-gold text-ink-950 shadow-[0_20px_60px_-12px_rgba(198,163,106,0.8)] transition-transform duration-500 group-hover:scale-110">
-                  <IconPlay className="ml-[6%] h-[38%] w-[38%]" />
-                </span>
-              </span>
-              <span className="text-center">
-                <span className="font-display block font-semibold text-ivory" style={{ fontSize: "max(15px, 2.4cqw)" }}>
-                  Watch the Trailer
-                </span>
-                <span
-                  className="font-body mt-[0.5cqw] block font-semibold text-gold uppercase"
-                  style={{ fontSize: "max(7px, 0.95cqw)", letterSpacing: "0.3em" }}
-                >
-                  {fmtTime(TOTAL)} · Sound on
-                </span>
-              </span>
-            </button>
-          )}
-
+         
           {/* ended state */}
           {ended && (
             <button

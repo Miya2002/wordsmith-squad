@@ -475,9 +475,9 @@ export const BUDGET_OPTIONS = [
 
 /* Placeholder contact details — replace with live channels before launch */
 export const CONTACT_INFO = {
-  email: "hello@wordsmithsquad.com",
+  email: "info@wordsmithsquad.com",
   phone: "+1 (000) 000-0000",
-  regions: "United States · United Kingdom · Canada · Australia",
+  regions: "Serving Clients in 50+ Countries Worldwide",
   hours: "Monday – Friday, 9am – 6pm (EST)",
 };
 

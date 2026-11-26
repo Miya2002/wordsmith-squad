@@ -106,7 +106,7 @@ const TESTIMONIAL_SLIDES = [
 
 export default function Home() {
   usePageMeta(
-    "Wordsmith Squad — Your Story. Our Craft.",
+    "Wordsmith Squad — From Ink to Icon",
     "Professional ghostwriting, editing, publishing, book design and marketing services."
   );
 

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { cn } from "@/utils/cn";
-import { Logo } from "./Logo";
+
 import { IconClose, IconMenu } from "./Icons";
 import { Button } from "./ui";
 
@@ -249,14 +249,22 @@ export function Navbar() {
               : "border-ivory/12 bg-ink-950/85 shadow-[0_16px_50px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl"
           )}
         >
-          {/* Logo */}
-          <Link
-            to="/"
-            aria-label="Wordsmith Squad Home"
-            className="shrink-0"
-          >
-            <Logo variant="horizontal" tone="onDark" size="sm" />
-          </Link>
+          
+{/* Official Wordsmith Squad Logo */}
+<Link
+  to="/"
+  aria-label="Wordsmith Squad Home"
+  className="flex shrink-0 items-center"
+>
+  <img
+    src="/wordsmith-logo.png"
+    alt="Wordsmith Squad - From Ink to Icon"
+    className="h-[56px] w-[74px] object-contain sm:h-[62px] sm:w-[86px] 2xl:h-[66px] 2xl:w-[95px]"
+    loading="eager"
+    decoding="async"
+  />
+</Link>
+
 
           {/* Desktop Navigation */}
           <nav
