@@ -8,8 +8,9 @@
         "dev:vercel": "vercel dev",
         "build": "vite build",
         "preview": "vite preview",
-        "start": "node server.cjs"
-    },
+        "start": "node server.cjs",
+        "postinstall": "npm run build"
+    }
     "dependencies": {
         "clsx": "2.1.1",
         "express": "^4.22.3",
