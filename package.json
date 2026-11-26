@@ -10,14 +10,14 @@
         "preview": "vite preview",
         "start": "node server.cjs",
         "postinstall": "npm run build"
-    }
+    },
     "dependencies": {
         "clsx": "2.1.1",
-        "express": "^4.22.3",
+        "express": "^4.21.2",
         "react": "19.2.6",
         "react-dom": "19.2.6",
         "react-router-dom": "^7.18.5",
-        "resend": "^6.40.0",
+        "resend": "^6.38.1",
         "tailwind-merge": "3.4.0"
     },
     "devDependencies": {
