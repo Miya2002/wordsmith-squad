@@ -16,124 +16,130 @@ import { EDITORIAL } from "@/lib/data";
 
 /* ==========================================
    WORDSMITH SQUAD
-   LUXURY GHOSTWRITING EXPERIENCE
+   GHOSTWRITING OVERVIEW
+
+   Content source:
+   Wordsmith Squad SEO for Website.pdf
+   Pages 1–28, 50–52, 77–80
+
+   Original page layout and animations retained.
 ========================================== */
 
-const G = "/ghostwriting";
+const G = "/explore/ghostwriting";
 
 const SERVICES = [
   {
     title: "Medical Ghostwriters",
     category: "Professional",
-    desc: "Transform complex medical knowledge into clear, compelling writing.",
+    desc: "Patient education articles, practice blogs, health newsletters, physician thought leadership and website content that is accurate, clear and compassionate.",
     slug: "medical-ghostwriters",
   },
   {
     title: "Screenplay Script Writing",
     category: "Creative",
-    desc: "Bring characters, dialogue, and cinematic stories to life.",
+    desc: "Turn your film or TV concept into a properly formatted screenplay with strong structure, dialogue and visual storytelling.",
     slug: "screenplay-script-writing",
   },
   {
     title: "Children's Book Writing",
     category: "Creative",
-    desc: "Create imaginative stories that inspire younger readers.",
+    desc: "Turn your idea into a polished manuscript with the right vocabulary, rhythm and page-by-page pacing for young readers.",
     slug: "childrens-book-writing",
   },
   {
     title: "Speech Script Writing",
     category: "Professional",
-    desc: "Find the right words for moments that deserve to be remembered.",
+    desc: "Keynotes, wedding toasts, eulogies, graduation speeches and executive remarks written to sound natural when spoken.",
     slug: "speech-script-writing",
   },
   {
     title: "Comic Book Writing",
     category: "Creative",
-    desc: "Build dynamic narratives, memorable characters, and powerful scenes.",
+    desc: "Panel-by-panel scripts with story arcs, dialogue and pacing built for artists, graphic novels, webcomics and series launches.",
     slug: "comic-book-writing",
   },
   {
     title: "Song Writing",
     category: "Creative",
-    desc: "Shape your ideas and emotions into expressive original lyrics.",
+    desc: "Original lyrics for artists, brands, weddings, tributes and special projects, with strong hooks and emotional impact.",
     slug: "song-writing",
   },
   {
     title: "Real Life Story Writing",
     category: "Books & Stories",
-    desc: "Preserve meaningful experiences in a beautifully written narrative.",
+    desc: "Turn remarkable real-life experiences into books with a clear narrative arc and emotional depth.",
     slug: "real-life-story-writing",
   },
   {
     title: "Book Publishing Services",
     category: "Books & Stories",
-    desc: "Explore the next steps for preparing and publishing your manuscript.",
+    desc: "Choose your publishing path, prepare your book files, set up retailer listings and plan your launch.",
     slug: "book-publishing-services",
   },
   {
     title: "Corporate Writing Services",
     category: "Business & Digital",
-    desc: "Communicate business ideas with clarity, purpose, and authority.",
+    desc: "Company profiles, reports, executive communications, case studies, policy documents and corporate announcements.",
     slug: "corporate-writing-services",
   },
   {
     title: "Technical Ghostwriting",
     category: "Professional",
-    desc: "Turn specialized information into accessible, structured content.",
+    desc: "White papers, case studies, documentation overviews, how-to guides, technical blog posts and industry articles.",
     slug: "technical-ghostwriting",
   },
   {
     title: "Podcast Script Writing",
     category: "Creative",
-    desc: "Craft engaging episodes with a confident and recognizable voice.",
+    desc: "Episode outlines, introductions, interview questions, solo episode scripts and show notes.",
     slug: "podcast-script-writing",
   },
   {
     title: "Brand Storytelling",
     category: "Business & Digital",
-    desc: "Express the purpose and personality behind your brand.",
+    desc: "Founder stories, mission statements, company histories and campaign narratives that build a real connection with your audience.",
     slug: "brand-storytelling",
   },
   {
     title: "Legal Ghostwriting",
     category: "Professional",
-    desc: "Develop carefully structured legal-industry content and narratives.",
+    desc: "Attorney bios, blog posts, client guides, newsletters, thought leadership articles and website content.",
     slug: "legal-ghostwriting",
   },
   {
     title: "Twitter Ghostwriting",
     category: "Business & Digital",
-    desc: "Create concise posts that communicate ideas and spark conversations.",
+    desc: "Sharp posts, threads and engagement replies that strengthen your professional voice on X.",
     slug: "twitter-ghostwriting",
   },
   {
     title: "Instagram Ghostwriting",
     category: "Business & Digital",
-    desc: "Build an engaging written voice for your visual content.",
+    desc: "Captions, carousel text, bios and story scripts that match your brand, tone and visual style.",
     slug: "instagram-ghostwriting",
   },
   {
     title: "Facebook Ghostwriting",
     category: "Business & Digital",
-    desc: "Connect with your audience through thoughtful social storytelling.",
+    desc: "Page posts, group content, event promotions and community updates that spark conversation.",
     slug: "facebook-ghostwriting",
   },
   {
     title: "LinkedIn Ghostwriting",
     category: "Business & Digital",
-    desc: "Turn professional experience into impactful thought leadership.",
+    desc: "Profile copy, thought leadership posts, articles and carousels that position you as a trusted voice in your industry.",
     slug: "linkedin-ghostwriting",
   },
   {
     title: "Scientific Ghostwriting",
     category: "Professional",
-    desc: "Present scientific concepts through clear and accurate communication.",
+    desc: "Research and data transformed into clear articles, white papers, grant support content, investor summaries and public explainers.",
     slug: "scientific-ghostwriting",
   },
   {
     title: "Find a Literary Agent",
     category: "Books & Stories",
-    desc: "Explore preparation and guidance for your literary representation journey.",
+    desc: "Query letters, book proposals, targeted submission lists and professional materials to help you approach literary agents.",
     slug: "find-a-literary-agent",
   },
 ] as const;
@@ -148,32 +154,38 @@ const FILTERS = [
 
 type Filter = (typeof FILTERS)[number];
 
+/*
+ * PDF process has five steps.
+ * Writer matching and planning are combined here
+ * to preserve the original four-card design.
+ */
+
 const PROCESS = [
   {
     n: "01",
-    title: "The Conversation",
-    text: "We begin by listening. Share your ideas, vision, audience, preferred tone, and goals.",
+    title: "Free Consultation",
+    text: "Share your goals, topic and timeline. Tell us about your book, your audience and the message you want to communicate.",
   },
   {
     n: "02",
-    title: "The Blueprint",
-    text: "Together, we shape the direction, structure, and creative foundation of your project.",
+    title: "Writer Match & Planning",
+    text: "We pair you with a writer suited to your project, build an outline and learn how you think and speak.",
   },
   {
     n: "03",
-    title: "The Writing",
-    text: "Your dedicated writing process begins, bringing research, storytelling, and craftsmanship together.",
+    title: "Drafting & Feedback",
+    text: "You review each stage, provide feedback and shape the direction of the writing.",
   },
   {
     n: "04",
-    title: "The Refinement",
-    text: "We review your feedback and refine the work until the message feels unmistakably yours.",
+    title: "Revision & Final Delivery",
+    text: "We refine the work according to the agreed revisions and deliver the finished manuscript or content.",
   },
 ];
 
 /* ==========================================
    CURSOR LIGHT
-   Smooth, subtle and performance-friendly
+   Original animation retained
 ========================================== */
 
 function useGoldSpotlight() {
@@ -221,28 +233,25 @@ function useGoldSpotlight() {
 
 /* ==========================================
    HERO MANUSCRIPT VISUAL
+   Original design retained
 ========================================== */
 
 function ManuscriptArt() {
   return (
     <div className="gw-scene relative mx-auto h-[420px] w-full max-w-[520px] sm:h-[520px] lg:h-[600px]">
-      {/* Ambient golden light */}
       <div
         aria-hidden
         className="pointer-events-none absolute top-[16%] left-[12%] h-[70%] w-[80%] rounded-full bg-gold/15 blur-[85px]"
       />
 
-      {/* Decorative orbit */}
       <div className="gw-orbit absolute inset-[8%] rounded-full border border-gold/20" />
 
       <div className="absolute inset-[16%] rounded-full border border-dashed border-gold/15" />
 
-      {/* Back paper */}
       <div className="absolute top-[18%] left-[15%] h-[66%] w-[59%] rotate-[-12deg] rounded-lg border border-[#b99f75] bg-[#d2bd96] shadow-[0_35px_65px_rgba(0,0,0,.55)]">
         <div className="absolute inset-4 rounded-sm border border-[#93774e]/30" />
       </div>
 
-      {/* Main manuscript */}
       <div className="gw-paper absolute top-[10%] left-[25%] z-10 h-[73%] w-[63%] rotate-[5deg] overflow-hidden rounded-lg border border-[#d4c4a5] bg-[#f3ecdc] shadow-[15px_45px_90px_rgba(0,0,0,.7)]">
         <div className="absolute inset-y-0 left-0 w-2 bg-[#b9a784]/30" />
 
@@ -253,22 +262,22 @@ function ManuscriptArt() {
           </div>
 
           <p className="mt-9 text-center font-display text-[clamp(1.3rem,3vw,2.3rem)] leading-[1.2] font-semibold text-[#30271c]">
-            The Stories
+            Your Story
             <br />
-            We Carry
+            Your Voice
           </p>
 
           <p className="mt-3 text-center font-display text-xs text-[#957448] italic sm:text-sm">
-            An unwritten masterpiece
+            Professional Book Ghostwriting
           </p>
 
           <div className="mx-auto mt-7 h-px w-14 bg-[#b18a52]" />
 
           <p className="mt-8 font-display text-[clamp(.8rem,1.5vw,1.1rem)] leading-[1.8] text-[#4d3e2b] italic">
-            Every story begins with a whisper.
-            An idea, a memory, a moment
-            waiting to become something
-            unforgettable...
+            You have a story
+            worth telling.
+            We help turn your ideas
+            into a finished manuscript.
           </p>
 
           <div className="mt-6 space-y-3" aria-hidden>
@@ -294,15 +303,10 @@ function ManuscriptArt() {
         </div>
       </div>
 
-      {/* Gold pen */}
       <div className="gw-pen absolute top-[26%] right-[7%] z-20 h-[53%] w-[10px] rotate-[34deg] rounded-full bg-gradient-to-r from-[#6d4a21] via-[#e7c384] to-[#8c602e] shadow-[10px_10px_25px_rgba(0,0,0,.6)]">
         <div className="absolute top-[9%] left-0 h-[3px] w-full bg-[#3d2a16]" />
         <div className="absolute right-0 bottom-[-15px] left-0 mx-auto h-5 w-[7px] rounded-b-full bg-[#b78b4d]" />
       </div>
-
-    
-
-      
 
       <div className="absolute right-[4%] bottom-[18%] z-20 flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-[#181510] font-display text-2xl text-gold italic shadow-xl sm:h-20 sm:w-20 sm:text-3xl">
         W
@@ -313,6 +317,7 @@ function ManuscriptArt() {
 
 /* ==========================================
    GHOSTWRITING SERVICE CARD
+   Original component retained
 ========================================== */
 
 function ServiceCard({
@@ -330,7 +335,7 @@ function ServiceCard({
       >
         <span
           aria-hidden
-          className="absolute -top-8 -right-2 font-display text-[7.5rem] leading-none text-gold/[.045] italic transition-colors duration-500 group-hover:text-gold/[.11]"
+          className="absolute -top-8 -right-2 font-display text-[7.5rem] leading-none text-gold/[.045] transition-colors duration-500 group-hover:text-gold/[.11]"
         >
           {String(index + 1).padStart(2, "0")}
         </span>
@@ -377,14 +382,16 @@ export default function Overview() {
   const { lightRef, move, leave } = useGoldSpotlight();
 
   usePageMeta(
-    "Professional Ghostwriting Services | Wordsmith Squad",
-    "Premium book, creative, business, professional, and digital ghostwriting services. Bring your story to life with Wordsmith Squad."
+    "Professional Ghostwriting Services for Authors, Founders and Brands | Wordsmith Squad",
+    "Professional ghostwriting services for authors, entrepreneurs, executives and first-time authors across the USA. Book ghostwriting, thought leadership, speeches and brand content."
   );
 
   const visibleServices =
     filter === "All"
       ? SERVICES
-      : SERVICES.filter((service) => service.category === filter);
+      : SERVICES.filter(
+          (service) => service.category === filter
+        );
 
   return (
     <main
@@ -392,7 +399,6 @@ export default function Overview() {
       onPointerMove={move}
       onPointerLeave={leave}
     >
-      {/* PAGE-ONLY ANIMATIONS */}
       <style>
         {`
           @keyframes gwFloat {
@@ -468,7 +474,7 @@ export default function Overview() {
         `}
       </style>
 
-      {/* FOLLOWING GOLDEN CURSOR LIGHT */}
+      {/* GOLD CURSOR EFFECT */}
       <div
         ref={lightRef}
         aria-hidden="true"
@@ -505,43 +511,45 @@ export default function Overview() {
               <div className="inline-flex max-w-full items-center gap-3 rounded-full border border-gold/25 bg-gold/[.07] px-5 py-3">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-gold" />
                 <span className="text-[10px] font-bold tracking-[.19em] text-gold uppercase sm:text-xs">
-                  The Art of Invisible Storytelling
+                  Core Ghostwriting Services
                 </span>
               </div>
             </Reveal>
 
             <Reveal delay={90}>
               <h1 className="mt-9 max-w-[800px] font-display text-[clamp(3.2rem,6.3vw,7rem)] leading-[1.035] font-semibold tracking-[-.045em] text-ivory">
-                Your Vision.
+                Professional
                 <br />
-                Our Words.
+                Ghostwriting
                 <br />
                 <em className="text-sheen italic">
-                  Your Story.
+                  Services.
                 </em>
               </h1>
             </Reveal>
 
             <Reveal delay={170}>
               <p className="mt-9 max-w-[590px] text-base leading-8 text-ivory/60 sm:text-lg">
-                You have the story. We bring the words.
-                Together, we turn extraordinary ideas,
-                lived experiences, and ambitious visions
-                into writing that leaves a lasting impression.
+                Everyone has ideas worth sharing, but not everyone
+                has the time or the skill to turn them into polished
+                writing. At Wordsmith Squad, our ghostwriting team
+                writes books, articles, speeches, thought leadership
+                and more in your voice, under your name, with
+                complete confidentiality.
               </p>
             </Reveal>
 
             <Reveal delay={240}>
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <Button to="/contact">
-                  Bring Your Story to Life
+                  Book Your Free Consultation
                 </Button>
 
                 <a
                   href="#ghostwriting-services"
                   className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full border border-ivory/25 px-6 py-3 text-sm font-semibold text-ivory transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold"
                 >
-                  Explore Our Expertise
+                  Explore Our Services
                   <span aria-hidden="true">↘</span>
                 </a>
               </div>
@@ -550,12 +558,14 @@ export default function Overview() {
             <Reveal delay={310}>
               <div className="mt-12 flex flex-wrap gap-x-6 gap-y-3 border-t border-ivory/10 pt-7 text-xs text-ivory/55">
                 {[
-                  "Your voice",
-                  "Your vision",
-                  "Our craftsmanship",
+                  "Your voice, always",
+                  "Genre-specific writers",
+                  "Clear communication",
                 ].map((item) => (
                   <span key={item}>
-                    <span className="mr-2 text-gold">✦</span>
+                    <span className="mr-2 text-gold">
+                      ✦
+                    </span>
                     {item}
                   </span>
                 ))}
@@ -572,54 +582,58 @@ export default function Overview() {
       </section>
 
       {/* ======================================
-          SECTION 2 — THE GHOSTWRITING ART
+          SECTION 2 — ABOUT GHOSTWRITING
       ====================================== */}
 
       <section className="relative bg-[#f5f0e7] py-24 md:py-36">
         <div className="wrap grid items-center gap-14 lg:grid-cols-[1fr_1fr] lg:gap-24">
           <div>
             <SectionHead
-              eyebrow="The art of telling your story"
+              eyebrow="What Is a Ghostwriter?"
               title={
                 <>
-                  Your Ideas.
+                  What Is a
                   <br />
-                  Beautifully{" "}
                   <em className="text-gold-dark italic">
-                    Expressed.
+                    Ghostwriter?
                   </em>
                 </>
               }
-              text="Ghostwriting is more than putting words on a page. It's the art of understanding another person's vision and bringing it to life."
+              text="A ghostwriter is a professional writer who creates content on someone else's behalf. You receive the credit and the ownership, while the writer works behind the scenes under a confidentiality agreement."
             />
 
             <Reveal delay={120}>
               <p className="mt-8 max-w-xl text-base leading-8 text-ink/65">
-                Whether you have a book waiting to be written,
-                a personal story worth preserving, or a
-                professional message ready to reach the world,
-                our writing approach begins with listening.
+                Ghostwriters have long helped CEOs,
+                politicians, doctors, athletes and
+                creators share their expertise and
+                stories. When you work with Wordsmith
+                Squad, the finished piece sounds like
+                you at your clearest and most confident.
               </p>
 
               <p className="mt-5 max-w-xl text-base leading-8 text-ink/65">
-                We focus on the ideas, experiences, and
-                personality behind every project, so that
-                the final words reflect what you truly
-                want to say.
+                Looking for a ghostwriter for hire?
+                After a free consultation, we match
+                you with a writer who knows your
+                subject, understands your audience
+                and can capture your tone.
               </p>
 
               <div className="mt-10 grid gap-3 sm:grid-cols-2">
                 {[
-                  "Personalized storytelling",
-                  "Collaborative writing",
-                  "Voice and tone consistency",
-                  "Thoughtful revisions",
+                  "Books, memoirs and ebooks",
+                  "Articles, blogs and LinkedIn writing",
+                  "Speeches and presentations",
+                  "Website and brand copy",
                 ].map((item) => (
                   <div
                     key={item}
                     className="flex items-center gap-3 rounded-xl border border-[#e0d4c0] bg-white/65 px-4 py-4 text-sm font-medium text-ink/80"
                   >
-                    <span className="text-gold-dark">✦</span>
+                    <span className="text-gold-dark">
+                      ✦
+                    </span>
                     {item}
                   </div>
                 ))}
@@ -642,10 +656,11 @@ export default function Overview() {
 
               <div className="absolute -bottom-6 left-3 max-w-[300px] rounded-2xl border border-gold/30 bg-[#181511] px-6 py-5 shadow-2xl sm:-left-6">
                 <p className="font-display text-2xl text-gold italic">
-                  Words with purpose.
+                  Your voice, always.
                 </p>
+
                 <p className="mt-2 text-[10px] tracking-[.15em] text-ivory/50 uppercase">
-                  Every story deserves its voice
+                  You bring the vision. We bring the craft.
                 </p>
               </div>
             </div>
@@ -654,7 +669,7 @@ export default function Overview() {
       </section>
 
       {/* ======================================
-          SECTION 3 — SERVICES
+          SECTION 3 — SERVICE CARDS
       ====================================== */}
 
       <section
@@ -668,20 +683,19 @@ export default function Overview() {
         <div className="wrap relative z-10">
           <SectionHead
             tone="light"
-            eyebrow="Discover our writing expertise"
+            eyebrow="Professional Ghostwriting Services We Offer"
             title={
               <>
-                Every Story Has
+                Ghostwriting
                 <br />
                 <em className="text-sheen italic">
-                  Its Own Language.
+                  Services We Offer.
                 </em>
               </>
             }
-            text="From books and creative scripts to professional and digital content, discover the writing service that matches your vision."
+            text="Our professional ghostwriting services are designed to meet your goals from the first idea to the final draft. Explore books, thought leadership, speech writing, business content and specialized ghostwriting."
           />
 
-          {/* Functional service filters */}
           <div
             className="mt-12 flex flex-wrap gap-2.5"
             role="group"
@@ -716,22 +730,22 @@ export default function Overview() {
 
           <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-ivory/10 pt-7">
             <p className="text-xs text-ivory/45">
-              Showing {visibleServices.length} of {SERVICES.length}{" "}
-              specialized services
+              Showing {visibleServices.length} of{" "}
+              {SERVICES.length} specialized services
             </p>
 
             <Link
               to="/contact"
               className="text-sm font-semibold text-gold transition-colors hover:text-ivory"
             >
-              Not sure what you need? Let's talk ↗
+              Book Your Free Consultation ↗
             </Link>
           </div>
         </div>
       </section>
 
       {/* ======================================
-          SECTION 4 — EDITORIAL QUOTE
+          SECTION 4 — PDF BRAND STATEMENT
       ====================================== */}
 
       <section className="relative overflow-hidden border-y border-gold/20 bg-[#231c14] py-24 text-center md:py-32">
@@ -747,11 +761,10 @@ export default function Overview() {
             </span>
 
             <h2 className="mx-auto -mt-2 max-w-5xl font-display text-[clamp(2rem,4.3vw,4.5rem)] leading-[1.2] font-medium text-ivory">
-              The most powerful stories
+              You Bring the Vision.
               <br />
-              begin with{" "}
               <em className="text-gold italic">
-                someone willing to tell them.
+                We Bring the Craft.
               </em>
             </h2>
 
@@ -771,18 +784,17 @@ export default function Overview() {
       <section className="bg-[#f6f1e8] py-24 md:py-36">
         <div className="wrap">
           <SectionHead
-            eyebrow="The collaborative journey"
+            eyebrow="How to Hire a Ghostwriter"
             title={
               <>
-                From Your First Idea
+                Our Simple
                 <br />
-                to{" "}
                 <em className="text-gold-dark italic">
-                  The Final Word.
+                  Process.
                 </em>
               </>
             }
-            text="A thoughtful writing journey centered on your vision, collaboration, and a shared understanding of your story."
+            text="Wondering how to hire a ghostwriter you can trust? Start with a free consultation, then move through writer matching, planning, drafting, feedback and final delivery."
           />
 
           <div className="relative mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -814,7 +826,7 @@ export default function Overview() {
       </section>
 
       {/* ======================================
-          SECTION 6 — WRITING PHILOSOPHY
+          SECTION 6 — WHY CHOOSE US
       ====================================== */}
 
       <section className="relative overflow-hidden bg-[#14120f] py-24 md:py-36">
@@ -823,7 +835,7 @@ export default function Overview() {
             <div className="overflow-hidden rounded-[2rem] border border-gold/20">
               <img
                 src={EDITORIAL.typewriter}
-                alt="Vintage typewriter symbolizing thoughtful storytelling"
+                alt="Vintage typewriter representing book ghostwriting"
                 loading="lazy"
                 className="gw-photo aspect-[5/4] w-full object-cover lg:aspect-[4/5]"
               />
@@ -831,11 +843,11 @@ export default function Overview() {
 
             <div className="absolute -right-3 -bottom-5 rounded-2xl border border-gold/25 bg-[#1c1812] px-6 py-4 shadow-2xl sm:-right-6">
               <p className="font-display text-2xl text-gold italic">
-                Your voice matters.
+                Your voice, not ours.
               </p>
 
               <p className="mt-1 text-[10px] tracking-[.15em] text-ivory/50 uppercase">
-                An author-first philosophy
+                Why Authors Choose Wordsmith Squad
               </p>
             </div>
           </Reveal>
@@ -843,34 +855,35 @@ export default function Overview() {
           <div>
             <Reveal>
               <Eyebrow tone="light">
-                The philosophy behind our words
+                Why Hire a Ghostwriter?
               </Eyebrow>
 
               <h2 className="mt-7 font-display text-[clamp(2.7rem,5vw,5rem)] leading-[1.08] font-semibold text-ivory">
-                Written by Us.
+                Save Time.
                 <br />
-                Inspired by You.
+                Stay in Control.
                 <br />
                 <em className="text-sheen italic">
-                  Always Yours.
+                  Protect Your Privacy.
                 </em>
               </h2>
             </Reveal>
 
             <Reveal delay={130}>
               <p className="mt-8 max-w-xl text-base leading-8 text-ivory/60">
-                No two voices are alike. Your personality,
-                perspective, and purpose shape the entire
-                creative process. Our role is to help express
-                them with precision and imagination.
+                Writing takes hours you could spend
+                running your business. A professional
+                shapes your ideas into clear, persuasive
+                writing, keeps your project moving
+                and helps you finish what you start.
               </p>
 
               <div className="mt-9 space-y-4">
                 {[
-                  "Writing informed by your ideas and experiences",
-                  "Clear communication and collaborative feedback",
-                  "Careful attention to authenticity and tone",
-                  "Thoughtfully structured, polished content",
+                  "Your voice, not ours",
+                  "Experienced writers matched to your needs",
+                  "Clear communication and regular updates",
+                  "Strict confidentiality through a signed NDA",
                 ].map((item) => (
                   <div
                     key={item}
@@ -888,7 +901,10 @@ export default function Overview() {
               </div>
 
               <div className="mt-10">
-                <Button to="/about" variant="outline-light">
+                <Button
+                  to="/about"
+                  variant="outline-light"
+                >
                   Discover Our Story
                 </Button>
               </div>
@@ -898,7 +914,7 @@ export default function Overview() {
       </section>
 
       {/* ======================================
-          SECTION 7 — FINAL GOLD CTA
+          SECTION 7 — FINAL CTA
       ====================================== */}
 
       <section className="relative overflow-hidden bg-[#c6a36a] py-24 text-center md:py-36">
@@ -914,27 +930,30 @@ export default function Overview() {
         <div className="wrap relative">
           <Reveal>
             <p className="text-[11px] font-bold tracking-[.3em] text-[#38291a] uppercase">
-              Every masterpiece begins somewhere
+              Ready to Work With a Ghostwriter?
             </p>
 
             <h2 className="mx-auto mt-7 max-w-5xl font-display text-[clamp(2.9rem,6vw,6.4rem)] leading-[1.05] font-semibold tracking-[-.04em] text-[#17130e]">
-              Your Story Deserves
+              Your Ideas Deserve
               <br />
               to Be{" "}
               <em className="italic">
-                Told.
+                Heard.
               </em>
             </h2>
 
             <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-[#3e3020] sm:text-lg">
-              You don't have to find every word alone.
-              Share your vision with us, and let's explore
-              how to turn your ideas into something extraordinary.
+              Let Wordsmith Squad turn them into clear,
+              compelling writing that represents you well.
+              Reach out today for a free consultation.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button to="/contact" variant="ink">
-                Start Your Ghostwriting Project
+              <Button
+                to="/contact"
+                variant="ink"
+              >
+                Book Your Free Consultation
               </Button>
 
               <Link

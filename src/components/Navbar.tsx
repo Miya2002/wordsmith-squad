@@ -28,28 +28,7 @@ export const MEGA_NAV: MenuGroup[] = [
     label: "About Us",
     to: "/about",
   },
-  {
-    label: "Editing",
-    to: "/explore/editing",
-    children: [
-      { label: "Proofreading", to: "/explore/editing/proofreading" },
-      { label: "Manuscript Editing", to: "/explore/editing/manuscript-editing" },
-      { label: "Book Formatting", to: "/explore/editing/book-formatting" },
-    ],
-  },
-  {
-    label: "Publishing",
-    to: "/explore/publishing",
-    children: [
-      
-      
-      { label: "eBook Publishing", to: "/explore/publishing/ebook-publishing" },
-      { label: "Audiobook Publishing", to: "/explore/publishing/audiobook-publishing" },
-      { label: "Self Publishing Consultants", to: "/explore/publishing/self-publishing-consultants" },
-      
-    ],
-  },
-  {
+   {
     label: "Ghostwriting",
     to: "/explore/ghostwriting",
     children: [
@@ -58,7 +37,7 @@ export const MEGA_NAV: MenuGroup[] = [
       { label: "Children's Book Writing", to: "/explore/ghostwriting/childrens-book-writing" },
       { label: "Speech Script Writing", to: "/explore/ghostwriting/speech-script-writing" },
       { label: "Comic Book Writing", to: "/explore/ghostwriting/comic-book-writing" },
-      { label: "Song Writing", to: "/explore/ghostwriting/song-writing" },
+      { label: "Novel Writing", to: "/explore/ghostwriting/novel-writing" },
       { label: "Real Life Story Writing", to: "/explore/ghostwriting/real-life-story-writing" },
       { label: "Book Publishing Services", to: "/explore/ghostwriting/book-publishing-services" },
       { label: "Corporate Writing Services", to: "/explore/ghostwriting/corporate-writing-services" },
@@ -75,6 +54,15 @@ export const MEGA_NAV: MenuGroup[] = [
     ],
   },
   {
+    label: "Editing",
+    to: "/explore/editing",
+    children: [
+      { label: "Proofreading", to: "/explore/editing/proofreading" },
+      { label: "Manuscript Editing", to: "/explore/editing/manuscript-editing" },
+      { label: "Book Formatting", to: "/explore/editing/book-formatting" },
+    ],
+  },
+   {
     label: "Genre",
     to: "/explore/genre",
     children: [
@@ -89,16 +77,32 @@ export const MEGA_NAV: MenuGroup[] = [
     ],
   },
   {
+    label: "Publishing",
+    to: "/explore/publishing",
+    children: [
+      
+      
+      { label: "eBook Publishing", to: "/explore/publishing/ebook-publishing" },
+      { label: "Audiobook Publishing", to: "/explore/publishing/audiobook-publishing" },
+      { label: "Self Publishing Consultants", to: "/explore/publishing/self-publishing-consultants" },
+      
+    ],
+  },
+ 
+ 
+  {
     label: "Creative Writing",
     to: "/explore/creative-writing",
-    children: [
-      { label: "Story Writing", to: "/explore/creative-writing/story-writing" },
-      { label: "Novel Writing", to: "/explore/creative-writing/novel-writing" },
-      { label: "Poetry Writing", to: "/explore/creative-writing/poetry-writing" },
-      { label: "Screenwriting", to: "/explore/creative-writing/screenwriting" },
-      { label: "Script Writing", to: "/explore/creative-writing/script-writing" },
-      { label: "Book Outlining", to: "/explore/creative-writing/book-outlining" },
-    ],
+   
+children: [
+  { label: "Copywriting", to: "/explore/creative-writing/copywriting" },
+  { label: "Thesis Writing", to: "/explore/creative-writing/thesis-writing" },
+  { label: "Dissertation Writing", to: "/explore/creative-writing/dissertation-writing" },
+  { label: "Research Writing", to: "/explore/creative-writing/research-writing" },
+  { label: "Script Writing", to: "/explore/creative-writing/script-writing" },
+  { label: "Article Writing", to: "/explore/creative-writing/article-writing" },
+],
+
   },
   {
     label: "Book Cover",

@@ -1,19 +1,231 @@
-import EditingSubpageLayout, { type EditingPageData } from "@/pages/editing/EditingSubpageLayout";
+
+import EditingSubpageLayout, {
+  type EditingPageData,
+} from "@/pages/editing/EditingSubpageLayout";
+
 import { EDITORIAL } from "@/lib/data";
 
-// Separate content file for this subpage. Update this data without affecting its main page or other subpages.
+/**
+ * WORDSMITH SQUAD
+ * Book Formatting Services
+ *
+ * Approved SEO source:
+ * Wordssmith Squad SEO for website.pdf
+ * Pages 29–31
+ *
+ * Existing layout, image, page number,
+ * styling and animations are retained.
+ */
+
 const data: EditingPageData = {
- title: 'Book Formatting',
- subtitle: 'Professional Book Formatting Services',
- number: '02',
- image: EDITORIAL.desk,
- imageAlt: 'Editorial workspace for Book Formatting',
- accent: "gold",
- description: 'Book Formatting support shaped around your project, audience and publishing goals.',
- sections: [{"heading": "Explore Book Formatting", "paragraphs": ["Book Formatting calls for more than a one-size-fits-all approach. The right decisions depend on the purpose of your project, the people you want to reach and the experience you want them to have.", "At Wordsmith Squad, we begin by understanding your brief, source material and expectations. We then shape a practical plan that keeps the work aligned with your voice while giving the final result clarity, structure and consistency.", "Whether you are starting with an early idea or refining an established project, our book formatting service is designed to make the next steps easier to understand and manage."]}, {"heading": "Why Book Formatting Matters", "paragraphs": ["A well-planned book formatting project gives your ideas a stronger foundation. It helps establish a clear direction, reduces avoidable revisions and makes the final work more useful to its intended audience.", "We pay attention to the details that influence quality: purpose, tone, structure, accuracy, consistency and presentation. Each decision is considered in the context of your specific brief."], "bullets": ["A clear direction based on your goals and audience.", "A structure that makes information easy to follow.", "Consistent tone, terminology and presentation.", "Thoughtful review at important project stages.", "A final result prepared around the agreed requirements."]}, {"heading": "What Our Book Formatting Service Can Include", "paragraphs": ["The scope is tailored to the type of material you are developing. We discuss the deliverables with you before work begins so the project has a shared and realistic direction."], "bullets": ["Initial discussion and project assessment.", "Planning and development of the core material.", "Refinement for clarity, flow and consistency.", "Review against your brief and intended audience.", "Final preparation and agreed revisions."]}, {"heading": "A Collaborative Process", "subsections": [{"heading": "Understand the Brief", "paragraphs": ["We learn about your objectives, audience, preferred style and any references or existing material relevant to your book formatting project."]}, {"heading": "Create a Practical Plan", "paragraphs": ["We outline the scope, milestones and expected deliverables so you know what will happen and when."]}, {"heading": "Develop and Refine", "paragraphs": ["The work is developed in stages, with attention to feedback, consistency and the requirements agreed at the start."]}, {"heading": "Review and Deliver", "paragraphs": ["We complete a final review and prepare the agreed files or materials for handover."]}]}, {"heading": "Who Can Benefit from Book Formatting?", "paragraphs": ["This service can support first-time creators, experienced professionals, independent authors, businesses and organizations. The approach changes according to the subject, complexity and intended use of the work."]}, {"heading": "Ready to Discuss Your Project?", "paragraphs": ["Every project begins with a conversation. Tell us what you are creating, what stage you have reached and what outcome you have in mind. We can then discuss a suitable way forward for your book formatting needs."]}],
- faqs: [{"question": "What is included in Book Formatting?", "answer": "The scope depends on your brief and project goals. We discuss the required deliverables, timeline and level of support before work begins."}, {"question": "Can the service be tailored to my project?", "answer": "Yes. We shape the process around your subject, audience, preferred style and the materials you provide."}, {"question": "Can I provide my own notes or draft?", "answer": "Absolutely. Existing drafts, outlines, research, notes and reference materials can help guide the work."}, {"question": "How long does the process take?", "answer": "Timing depends on the length, complexity and scope of the project. We agree on a realistic schedule after reviewing your requirements."}, {"question": "Will my project details be kept private?", "answer": "We treat client materials and project information with care and discuss confidentiality expectations as part of the project."}]
+  title: "Book Formatting",
+
+  subtitle:
+    "Professional Book Formatting and Typesetting for Print and Digital",
+
+  number: "02",
+
+  image: EDITORIAL.desk,
+
+  imageAlt: "Editorial workspace for Book Formatting",
+
+  accent: "gold",
+
+  description:
+    "A great manuscript can still look amateur if the pages are poorly laid out. Awkward margins, uneven spacing and broken chapter headings make readers lose trust fast. At Wordsmith Squad, we prepare your book so it looks like it came from a traditional publisher, whether you are publishing on Amazon, IngramSpark or your own website. You keep full ownership of your files.",
+
+  sections: [
+    {
+      heading: "Book Formatting Services",
+
+      paragraphs: [
+        "Our book formatting services turn your finished manuscript into clean, publish-ready files. We handle page size, margins, fonts, chapter openers, headers, footers, page numbers, front and back matter, and the technical requirements of each platform. Everything is built to look polished in both print and digital form.",
+
+        "Includes: Print Ready PDF, EPUB and files ready for upload to major retailers.",
+      ],
+    },
+
+    {
+      heading: "Book Formatting",
+
+      paragraphs: [
+        "Good book formatting is invisible. Readers don’t notice it, but they feel it. Consistent spacing, readable type and clean page flow keep people reading.",
+
+        "We format fiction, nonfiction, memoirs, business books, cookbooks and children’s books, each with a layout suited to its genre.",
+      ],
+    },
+
+    {
+      heading: "Kindle Formatting",
+
+      paragraphs: [
+        "Digital books need a different approach from print. Our Kindle formatting service creates reflowable e-books that display properly on Kindle devices, phones and tablets.",
+
+        "We build working tables of contents, clean chapter breaks, properly sized images and files that pass Amazon KDP checks without errors.",
+      ],
+    },
+
+    {
+      heading: "Book Typesetting",
+
+      paragraphs: [
+        "Book typesetting is the craft of arranging text on the page so it is easy and pleasant to read.",
+
+        "It covers choosing the right typeface, adjusting line spacing and kerning, controlling widows and orphans, and balancing every page.",
+
+        "Our typesetters give your book the professional finish that sets it apart from self-published books that look homemade.",
+      ],
+    },
+
+    {
+      heading: "Layout Design and Typesetting",
+
+      paragraphs: [
+        "Our layout design and typesetting service goes further for books that need more than plain text.",
+
+        "Cookbooks, workbooks, photo books, textbooks and children’s books often need columns, sidebars, images, callout boxes and special page designs.",
+
+        "We plan the whole layout so it looks attractive and stays easy to follow.",
+      ],
+    },
+
+    {
+      heading: "Interior Book Design",
+
+      paragraphs: [
+        "Your cover gets the reader to pick up the book. Your interior book design keeps them reading.",
+
+        "We create a consistent, custom interior with decorative chapter openers, elegant section breaks, branded styling and a layout that fits your genre and audience.",
+      ],
+    },
+
+    {
+      heading:
+        "Book Formatting Software vs. a Professional Formatter",
+
+      paragraphs: [
+        "Many authors search for book formatting software hoping to do the job themselves. Tools such as Microsoft Word, Vellum and Atticus can produce good results, but they take time to learn, and some are limited by the type of computer you use.",
+
+        "Common problems include wrong margins for the page count, rejected uploads, bad e-book conversions and a layout that looks off in print.",
+
+        "If you enjoy the process and have the time, software can work well. If you would rather spend that time on marketing and your next book, our team handles formatting for you and delivers files that are ready to upload.",
+      ],
+    },
+
+    {
+      heading: "How It Works",
+
+      subsections: [
+        {
+          heading: "01. Send Your Manuscript",
+
+          paragraphs: [
+            "Share your final, edited file.",
+          ],
+        },
+
+        {
+          heading: "02. Choose Your Format",
+
+          paragraphs: [
+            "Print, e-book or both, and your trim size.",
+          ],
+        },
+
+        {
+          heading: "03. Design Approval",
+
+          paragraphs: [
+            "We prepare a sample layout for your feedback.",
+          ],
+        },
+
+        {
+          heading: "04. Full Formatting",
+
+          paragraphs: [
+            "We format the entire book and check every page.",
+          ],
+        },
+
+        {
+          heading: "05. Final Files",
+
+          paragraphs: [
+            "You receive upload-ready files for your publishing platform.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Why Choose Wordsmith Squad",
+
+      bullets: [
+        "Publishing-platform expertise for Amazon KDP, IngramSpark and more",
+
+        "Genre-appropriate design that fits your readers",
+
+        "Clean, error-free files checked before delivery",
+
+        "Fast turnaround",
+
+        "Easy revisions",
+
+        "Full ownership of your finished files",
+      ],
+    },
+
+    {
+      heading:
+        "Ready to Make Your Book Look Professional?",
+
+      paragraphs: [
+        "Get a Free Formatting Quote",
+      ],
+    },
+  ],
+
+  faqs: [
+    {
+      question: "What file do I need to send you?",
+
+      answer:
+        "A finished, edited manuscript, ideally in Word or Google Docs. Formatting works best after editing is complete.",
+    },
+
+    {
+      question:
+        "Do you format for both print and e-book?",
+
+      answer:
+        "Yes. We can prepare either or both.",
+    },
+
+    {
+      question:
+        "Can you format a book I wrote myself?",
+
+      answer:
+        "Yes. Your manuscript can come from anywhere.",
+    },
+
+    {
+      question: "Do you handle covers?",
+
+      answer: "Yes.",
+    },
+
+    {
+      question:
+        "How much does book formatting cost?",
+
+      answer:
+        "Pricing depends on page count, complexity and file types.",
+    },
+  ],
 };
 
 export default function BookFormatting() {
- return <EditingSubpageLayout data={data} />;
+  return <EditingSubpageLayout data={data} />;
 }

@@ -1,21 +1,206 @@
+
 import GhostwritingSubpageLayout, {
   type EditingPageData,
 } from "@/pages/ghostwriting/GhostwritingSubpageLayout";
+
 import { EDITORIAL } from "@/lib/data";
 
-// Separate content file for this subpage. Update this data without affecting its main page or other subpages.
+/**
+ * WORDSMITH SQUAD
+ * Facebook Ghostwriting
+ *
+ * Approved SEO Content Source:
+ * Wordssmith Squad SEO for website.pdf
+ * Pages 9–13
+ *
+ * Original layout, styling, animations,
+ * page number, image and components retained.
+ */
+
 const data: EditingPageData = {
- title: 'Facebook Ghostwriting',
- subtitle: 'Professional Facebook Ghostwriting Services',
- number: '16',
- image: EDITORIAL.desk,
- imageAlt: 'Editorial workspace for Facebook Ghostwriting',
- accent: "gold",
- description: 'Facebook Ghostwriting support shaped around your project, audience and publishing goals.',
- sections: [{"heading": "Explore Facebook Ghostwriting", "paragraphs": ["Facebook Ghostwriting calls for more than a one-size-fits-all approach. The right decisions depend on the purpose of your project, the people you want to reach and the experience you want them to have.", "At Wordsmith Squad, we begin by understanding your brief, source material and expectations. We then shape a practical plan that keeps the work aligned with your voice while giving the final result clarity, structure and consistency.", "Whether you are starting with an early idea or refining an established project, our facebook ghostwriting service is designed to make the next steps easier to understand and manage."]}, {"heading": "Why Facebook Ghostwriting Matters", "paragraphs": ["A well-planned facebook ghostwriting project gives your ideas a stronger foundation. It helps establish a clear direction, reduces avoidable revisions and makes the final work more useful to its intended audience.", "We pay attention to the details that influence quality: purpose, tone, structure, accuracy, consistency and presentation. Each decision is considered in the context of your specific brief."], "bullets": ["A clear direction based on your goals and audience.", "A structure that makes information easy to follow.", "Consistent tone, terminology and presentation.", "Thoughtful review at important project stages.", "A final result prepared around the agreed requirements."]}, {"heading": "What Our Facebook Ghostwriting Service Can Include", "paragraphs": ["The scope is tailored to the type of material you are developing. We discuss the deliverables with you before work begins so the project has a shared and realistic direction."], "bullets": ["Initial discussion and project assessment.", "Planning and development of the core material.", "Refinement for clarity, flow and consistency.", "Review against your brief and intended audience.", "Final preparation and agreed revisions."]}, {"heading": "A Collaborative Process", "subsections": [{"heading": "Understand the Brief", "paragraphs": ["We learn about your objectives, audience, preferred style and any references or existing material relevant to your facebook ghostwriting project."]}, {"heading": "Create a Practical Plan", "paragraphs": ["We outline the scope, milestones and expected deliverables so you know what will happen and when."]}, {"heading": "Develop and Refine", "paragraphs": ["The work is developed in stages, with attention to feedback, consistency and the requirements agreed at the start."]}, {"heading": "Review and Deliver", "paragraphs": ["We complete a final review and prepare the agreed files or materials for handover."]}]}, {"heading": "Who Can Benefit from Facebook Ghostwriting?", "paragraphs": ["This service can support first-time creators, experienced professionals, independent authors, businesses and organizations. The approach changes according to the subject, complexity and intended use of the work."]}, {"heading": "Ready to Discuss Your Project?", "paragraphs": ["Every project begins with a conversation. Tell us what you are creating, what stage you have reached and what outcome you have in mind. We can then discuss a suitable way forward for your facebook ghostwriting needs."]}],
- faqs: [{"question": "What is included in Facebook Ghostwriting?", "answer": "The scope depends on your brief and project goals. We discuss the required deliverables, timeline and level of support before work begins."}, {"question": "Can the service be tailored to my project?", "answer": "Yes. We shape the process around your subject, audience, preferred style and the materials you provide."}, {"question": "Can I provide my own notes or draft?", "answer": "Absolutely. Existing drafts, outlines, research, notes and reference materials can help guide the work."}, {"question": "How long does the process take?", "answer": "Timing depends on the length, complexity and scope of the project. We agree on a realistic schedule after reviewing your requirements."}, {"question": "Will my project details be kept private?", "answer": "We treat client materials and project information with care and discuss confidentiality expectations as part of the project."}]
+  title: "Facebook Ghostwriting",
+
+  subtitle:
+    "Professional Facebook Ghostwriting Services",
+
+  number: "16",
+
+  image: EDITORIAL.desk,
+
+  imageAlt:
+    "Editorial workspace for Facebook Ghostwriting",
+
+  accent: "gold",
+
+  description:
+    "With Facebook ghostwriting, we create page posts, group content, event promotions and community updates that spark conversation and keep your audience engaged.",
+
+  sections: [
+    {
+      heading: "Facebook Ghostwriting",
+
+      paragraphs: [
+        "With Facebook ghostwriting, we create page posts, group content, event promotions and community updates that spark conversation and keep your audience engaged.",
+      ],
+
+      bullets: [
+        "Page posts",
+        "Group content",
+        "Event promotions",
+        "Community updates",
+      ],
+    },
+
+    {
+      heading: "Social Media and Email Ghostwriting",
+
+      paragraphs: [
+        "Consistency builds an audience, but posting daily is exhausting. We handle the writing so you can stay visible while you focus on your work.",
+      ],
+    },
+
+    {
+      heading:
+        "Specialized Ghostwriting for Professionals, Leaders and Organizations in the USA",
+
+      paragraphs: [
+        "Some writing needs more than good grammar. It needs industry knowledge, the right tone for the platform, and an understanding of the audience.",
+
+        "At Wordsmith Squad, our niche ghostwriters pair subject-matter understanding with strong writing, so your content sounds like you and is credible in your field.",
+
+        "From executive thought leadership to social media, from technical documents to nonprofit storytelling, our team writes in your voice while you keep full credit and complete confidentiality.",
+      ],
+    },
+
+    {
+      heading: "Twitter Ghostwriting",
+
+      paragraphs: [
+        "Our Twitter ghostwriting service (now also known as X) delivers sharp posts, threads and engagement replies that grow your following and strengthen your voice.",
+      ],
+    },
+
+    {
+      heading: "Instagram Ghostwriting",
+
+      paragraphs: [
+        "Our Instagram ghostwriting team writes captions, carousel text, bios and story scripts that match your brand, tone and visual style.",
+      ],
+    },
+
+    {
+      heading: "Email Ghostwriting",
+
+      paragraphs: [
+        "Email still drives some of the strongest returns in marketing. Our email ghostwriting service covers newsletters, welcome sequences, sales campaigns, launch emails and personal outreach written in your voice, designed to be opened, read and acted on.",
+      ],
+    },
+
+    {
+      heading:
+        "Why Choose Wordsmith Squad for Niche Ghostwriting",
+
+      bullets: [
+        "Industry-aware writers. We match your project to a writer who understands your field.",
+
+        "Your voice, always. We study how you speak and write before drafting.",
+
+        "Full ownership. You hold all rights to everything we create.",
+
+        "Strict confidentiality. Every project is covered by an NDA.",
+
+        "Review and approval. Nothing goes out without your sign-off, which matters most for legal, medical and scientific content.",
+
+        "Clear communication. Regular updates and easy access to your writer.",
+
+        "Built for US audiences. American English and US market expectations.",
+      ],
+    },
+
+    {
+      heading: "How It Works",
+
+      subsections: [
+        {
+          heading: "01. Free Consultation",
+
+          paragraphs: [
+            "Tell us your goals, audience and platform.",
+          ],
+        },
+
+        {
+          heading: "02. Writer Match",
+
+          paragraphs: [
+            "We pair you with a specialist for your niche.",
+          ],
+        },
+
+        {
+          heading: "03. Voice and Topic Discovery",
+
+          paragraphs: [
+            "Interviews, samples and source material guide the writing.",
+          ],
+        },
+
+        {
+          heading: "04. Draft and Review",
+
+          paragraphs: [
+            "You review, request changes and approve.",
+          ],
+        },
+
+        {
+          heading: "05. Publish and Repeat",
+
+          paragraphs: [
+            "We deliver final content and keep it consistent over time.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Let's Give Your Expertise a Stronger Voice",
+
+      paragraphs: [
+        "Whether you need a LinkedIn ghostwriter for your personal brand, CEO ghostwriting for your leadership message, or content for a specialized field, Wordsmith Squad is ready to help.",
+      ],
+    },
+  ],
+
+  faqs: [
+    {
+      question:
+        "Do you offer ongoing monthly content plans?",
+
+      answer:
+        "Many clients choose monthly packages for LinkedIn, social media and email, which keep content consistent.",
+    },
+
+    {
+      question:
+        "Will anyone know I used a ghostwriter?",
+
+      answer:
+        "No. We sign an NDA, and you are the credited author.",
+    },
+
+    {
+      question:
+        "Can a ghostwriter write my LinkedIn posts so they sound like me?",
+
+      answer:
+        "Yes. We study your past writing, speaking style and opinions, then write posts that reflect your voice and expertise.",
+    },
+  ],
 };
 
 export default function FacebookGhostwriting() {
-return <GhostwritingSubpageLayout data={data} />;
+  return (
+    <GhostwritingSubpageLayout data={data} />
+  );
 }

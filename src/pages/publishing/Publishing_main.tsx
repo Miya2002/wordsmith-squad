@@ -11,97 +11,109 @@ import {
 import { EDITORIAL } from "@/lib/data";
 
 /* ============================================
-   WORDSMITH SQUAD — PREMIUM PUBLISHING PAGE
-   Uses existing project theme & components
+   WORDSMITH SQUAD — PUBLISHING MAIN PAGE
+
+   Approved SEO Content Source:
+   Wordssmith Squad SEO for website.pdf
+   Pages 42–59
+
+   Original layout, animation, typography,
+   color palette and visual design retained.
 ============================================ */
 
 const SERVICES = [
   {
     number: "01",
     title: "Book Publishing Services",
-    subtitle: "From manuscript to masterpiece",
+    subtitle: "PUBLISHING GUIDANCE & SUPPORT",
     description:
-      "A guided publishing experience bringing editorial preparation, design, production and launch planning together.",
+      "Our book publishing services take your finished manuscript through the steps between done writing and live on sale. Choose your publishing path, prepare files, set up retailer listings, and plan your launch.",
     path: "/publishing/book-publishing-services",
     symbol: "✦",
   },
   {
     number: "02",
     title: "Self Publishing",
-    subtitle: "Your book. Your ownership.",
+    subtitle: "CONTROL, RIGHTS & ROYALTIES",
     description:
-      "Bring your story to readers while retaining creative control over your manuscript and publishing decisions.",
+      "Self-publishing gives you speed, control and the freedom to keep your rights. We guide you through editing, design, formatting, uploading, pricing and marketing.",
     path: "/publishing/self-publishing",
     symbol: "◇",
   },
   {
     number: "03",
     title: "eBook Publishing",
-    subtitle: "Stories without boundaries",
+    subtitle: "DIGITAL BOOK PUBLISHING",
     description:
-      "Transform your manuscript into a professionally prepared digital edition designed for modern reading experiences.",
+      "Ebook publishing is one of the fastest and most affordable ways to get a book to market. We prepare your e-book for Kindle, Apple Books, Kobo and other platforms.",
     path: "/publishing/ebook-publishing",
     symbol: "▣",
   },
   {
     number: "04",
-    title: "Print on Demand",
-    subtitle: "Made for the reader",
+    title: "Audiobook Publishing",
+    subtitle: "NARRATION & AUDIO DISTRIBUTION",
     description:
-      "Prepare print-ready editions and explore flexible production options without committing to large initial print runs.",
-    path: "/publishing/print-on-demand",
+      "Audiobook publishing involves more than recording. We help prepare, edit, master and check your audio files to meet platform quality standards.",
+    path: "/publishing/audiobook-publishing",
     symbol: "◈",
   },
   {
     number: "05",
-    title: "ISBN & Distribution",
-    subtitle: "Prepare for the marketplace",
+    title: "Self Publishing Consultants",
+    subtitle: "ONE-ON-ONE PUBLISHING GUIDANCE",
     description:
-      "Navigate book identifiers, publishing metadata and distribution considerations with informed guidance.",
-    path: "/publishing/isbn-and-distribution",
+      "Our self publishing consultants offer one-on-one guidance to help you pick a path, avoid common mistakes and plan your launch.",
+    path: "/publishing/self-publishing-consultants",
     symbol: "✧",
   },
   {
     number: "06",
-    title: "Amazon KDP Publishing",
-    subtitle: "Your publishing journey online",
+    title: "Print on Demand Books",
+    subtitle: "PAPERBACKS & HARDCOVERS",
     description:
-      "Prepare your book for Amazon Kindle Direct Publishing with support for formatting, metadata and submission.",
-    path: "/publishing/amazon-kdp-publishing",
+      "Print on demand books are printed only when a customer orders. We help you choose a trim size, paper type and cover finish that fit your book and budget.",
+    path: "/publishing/self-publishing",
     symbol: "↗",
   },
-];
+] as const;
+
+/*
+   The PDF describes a four-step publishing path:
+   Review manuscript, choose path, prepare files,
+   publish and launch.
+*/
 
 const STEPS = [
   {
     n: "01",
-    title: "The Manuscript",
+    title: "Review Your Manuscript",
     description:
-      "We begin with your book, your audience and your publishing ambitions.",
+      "Is it edited and ready, or does it need more work first?",
   },
   {
     n: "02",
-    title: "The Refinement",
+    title: "Choose Your Path",
     description:
-      "Editorial review, preparation and careful attention to the reading experience.",
+      "Traditional, hybrid or self-publishing.",
   },
   {
     n: "03",
-    title: "The Creation",
+    title: "Prepare Your Files",
     description:
-      "Cover design, interior formatting and preparation of your final editions.",
+      "Formatting, cover files and metadata.",
   },
   {
     n: "04",
-    title: "The Publication",
+    title: "Publish and Launch",
     description:
-      "Platform preparation, distribution planning and the exciting next chapter.",
+      "Upload, proof, release and promote.",
   },
 ];
 
 /* ============================================
    GOLD CURSOR GLOW
-   Only active on fine pointer devices
+   Original animation retained
 ============================================ */
 
 function useGoldCursor() {
@@ -116,6 +128,7 @@ function useGoldCursor() {
     element.style.transform = `translate3d(${
       event.clientX - 180
     }px, ${event.clientY - 180}px, 0)`;
+
     element.style.opacity = "1";
   };
 
@@ -130,6 +143,7 @@ function useGoldCursor() {
 
 /* ============================================
    ANIMATED BOOK SHOWCASE
+   Existing design retained
 ============================================ */
 
 function BookShowcase() {
@@ -159,25 +173,29 @@ function BookShowcase() {
         <div
           className="absolute inset-0 rounded-r-lg bg-cover bg-center opacity-70"
           style={{
-            backgroundImage: `linear-gradient(180deg,rgba(55,31,17,.30),rgba(33,19,11,.65)),url("${EDITORIAL.library}")`,
+            backgroundImage: `linear-gradient(
+              180deg,
+              rgba(55,31,17,.30),
+              rgba(33,19,11,.65)
+            ),url("${EDITORIAL.library}")`,
           }}
         />
 
         <div className="relative flex h-full flex-col items-center justify-between px-2 py-7 text-center text-[#f2e0bb]">
           <span className="text-[7px] tracking-[.25em] uppercase">
-            A literary journey
+            Wordsmith Squad
           </span>
 
           <span className="font-display text-[clamp(1rem,2.2vw,1.7rem)] leading-tight">
-            THE
+            BOOK
             <br />
-            LAST
+            PUBLISHING
             <br />
-            CHAPTER
+            SERVICES
           </span>
 
           <span className="text-[7px] tracking-[.2em] uppercase">
-            An original story
+            Publishing Guidance
           </span>
         </div>
       </div>
@@ -195,18 +213,18 @@ function BookShowcase() {
         {/* Book typography */}
         <div className="relative flex h-full flex-col items-center justify-between px-4 py-9 text-center sm:py-12">
           <span className="text-[7px] font-semibold tracking-[.3em] text-gold uppercase sm:text-[9px]">
-            Wordsmith Squad Presents
+            Wordsmith Squad
           </span>
 
           <div>
             <div className="mx-auto mb-5 h-px w-16 bg-gold/60" />
 
             <span className="font-display text-[clamp(1.4rem,3vw,1.5rem)] leading-[1.18] text-[#e8c68c]">
-              THE ART
+              YOUR
               <br />
-              OF
+              BOOK
               <br />
-              BECOMING
+              PUBLISHED
             </span>
 
             <div className="mx-auto mt-5 h-px w-16 bg-gold/60" />
@@ -217,7 +235,7 @@ function BookShowcase() {
           </div>
 
           <span className="text-[7px] tracking-[.25em] text-gold/80 uppercase sm:text-[9px]">
-            A Story Worth Telling
+            Print & Digital
           </span>
         </div>
 
@@ -228,16 +246,16 @@ function BookShowcase() {
       {/* Ivory book */}
       <div className="pub-float-slow absolute top-[31%] right-[2%] z-30 flex h-[53%] w-[31%] rotate-[12deg] flex-col items-center justify-between rounded-r-lg border border-[#d8c5a2] bg-[#eee7d7] px-3 py-7 text-center shadow-[15px_20px_40px_rgba(0,0,0,.65)]">
         <span className="text-[7px] tracking-[.2em] text-[#8c714c] uppercase">
-          A New Perspective
+          Self Publishing
         </span>
 
         <div>
           <span className="font-display text-[clamp(1rem,2vw,1.7rem)] leading-[1.1] font-semibold text-[#28221b]">
-            BETWEEN
+            YOUR
             <br />
-            THE
+            CREATIVE
             <br />
-            LINES
+            CONTROL
           </span>
 
           <div className="mx-auto mt-6 flex flex-col items-center gap-1.5">
@@ -252,20 +270,16 @@ function BookShowcase() {
         </div>
 
         <span className="text-[7px] tracking-[.2em] text-[#8c714c] uppercase">
-          A Literary Collection
+          Book Publishing
         </span>
       </div>
-
-      {/* Floating status cards */}
-      
-
-     
     </div>
   );
 }
 
 /* ============================================
    PUBLISHING SERVICE CARD
+   Existing visual style retained
 ============================================ */
 
 function PublishingCard({
@@ -326,8 +340,8 @@ function PublishingCard({
 
 export default function Overview() {
   usePageMeta(
-    "Professional Book Publishing Services — Wordsmith Squad",
-    "Explore book publishing, self-publishing, eBook publishing, print-on-demand, ISBN and distribution, and Amazon KDP publishing services."
+    "Book Publishing Guidance and Support for Authors in the USA | Wordsmith Squad",
+    "Book publishing services for authors in the USA. Traditional, hybrid and self-publishing guidance, Amazon KDP, eBook publishing, audiobook publishing and print-on-demand support."
   );
 
   const { cursor, move, leave } = useGoldCursor();
@@ -338,22 +352,34 @@ export default function Overview() {
       onPointerMove={move}
       onPointerLeave={leave}
     >
-      {/* Scoped animations and reduced-motion support */}
+      {/* Original scoped animations */}
       <style>
         {`
           @keyframes pubFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            0%, 100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-15px);
+            }
           }
 
           @keyframes pubFloatSlow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(12px); }
+            0%, 100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(12px);
+            }
           }
 
           @keyframes pubOrbit {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
           }
 
           .pub-float {
@@ -396,7 +422,7 @@ export default function Overview() {
         `}
       </style>
 
-      {/* Gold cursor glow — desktop only */}
+      {/* Gold cursor glow */}
       <div
         ref={cursor}
         aria-hidden="true"
@@ -409,12 +435,11 @@ export default function Overview() {
         }}
       />
 
-      {/* ================================== */}
-      {/* 1 — CINEMATIC HERO */}
-      {/* ================================== */}
+      {/* ==================================
+          1 — CINEMATIC HERO
+      ================================== */}
 
       <section className="relative min-h-[780px] overflow-hidden pt-36 pb-24 sm:pt-40 lg:flex lg:min-h-[850px] lg:items-center lg:pt-32">
-        {/* Background ambience */}
         <div className="bg-dots pointer-events-none absolute inset-0 opacity-35" />
 
         <div className="pointer-events-none absolute -top-32 -right-40 h-[600px] w-[600px] rounded-full bg-gold/[0.075] blur-[120px]" />
@@ -433,42 +458,45 @@ export default function Overview() {
           <div>
             <Reveal>
               <Eyebrow tone="light">
-                Creative Publishing &amp; Book Production
+                Book Publishing Services
               </Eyebrow>
             </Reveal>
 
             <Reveal delay={100}>
               <h1 className="mt-9 max-w-[750px] font-display text-[clamp(3.35rem,6.2vw,7rem)] leading-[1.04] font-semibold tracking-[-.045em] text-ivory">
-                Your Story.
+                Book Publishing
                 <br />
-                Our Craft.
+                Guidance and
                 <br />
                 <em className="text-sheen italic">
-                  Published.
+                  Support.
                 </em>
               </h1>
             </Reveal>
 
             <Reveal delay={180}>
               <p className="mt-9 max-w-[580px] text-base leading-8 text-ivory/60 sm:text-lg">
-                From the final manuscript to a beautifully
-                produced book, we help transform your vision
-                into a publishing experience worth remembering.
-                Every detail considered. Every page with purpose.
+                Finishing a manuscript is a big milestone.
+                Getting it into readers' hands is the next one,
+                and the options can feel confusing.
+                At Wordsmith Squad, we help you understand
+                your options, prepare your book properly
+                and publish it the way that fits your goals.
+                You keep your rights and your creative control.
               </p>
             </Reveal>
 
             <Reveal delay={240}>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Button to="/contact">
-                  Start Your Publishing Journey
+                  Book Your Free Consultation
                 </Button>
 
                 <a
                   href="#publishing-services"
                   className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full border border-ivory/25 px-6 py-3 text-sm font-semibold text-ivory transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold"
                 >
-                  Explore Our Expertise
+                  Explore Publishing Services
                   <span aria-hidden>↘</span>
                 </a>
               </div>
@@ -477,9 +505,9 @@ export default function Overview() {
             <Reveal delay={300}>
               <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-ivory/10 pt-7">
                 {[
-                  "Author-first approach",
-                  "Print & digital",
-                  "Creative control",
+                  "You keep your rights and files",
+                  "Transparent pricing",
+                  "Publishing guidance",
                 ].map((text) => (
                   <span
                     key={text}
@@ -502,43 +530,51 @@ export default function Overview() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/35 to-transparent" />
       </section>
 
-      {/* ================================== */}
-      {/* 2 — EDITORIAL INTRODUCTION */}
-      {/* ================================== */}
+      {/* ==================================
+          2 — PUBLISHING INTRODUCTION
+      ================================== */}
 
       <section className="relative bg-[#f3eee4] py-24 md:py-36">
         <div className="wrap grid items-center gap-14 lg:grid-cols-2 lg:gap-24">
           <div>
             <SectionHead
-              eyebrow="Beyond the final page"
+              eyebrow="Book Publishing Company"
               title={
                 <>
-                  A Manuscript Is Written.
+                  Publish Your
                   <br />
-                  A Book Is{" "}
                   <em className="text-gold-dark italic">
-                    Created.
+                    Book.
                   </em>
                 </>
               }
-              text="Publishing is where creativity meets precision — where an author's hard work becomes something readers can hold, discover and remember."
+              text="Our book publishing services take your finished manuscript through the steps between done writing and live on sale."
             />
 
             <Reveal delay={130}>
               <p className="mt-8 max-w-xl text-base leading-8 text-ink/65">
-                Every publishing decision contributes to the
-                final experience. From formatting and design to
-                publishing platforms and distribution planning,
-                our approach brings the important details together
-                around your vision.
+                Depending on your needs, this can include
+                choosing a publishing path, preparing files,
+                setting up your book on retail platforms,
+                writing your book description, selecting
+                categories and keywords, and planning your
+                launch.
+              </p>
+
+              <p className="mt-5 max-w-xl text-base leading-8 text-ink/65">
+                Wordsmith Squad works as a book publishing
+                company in the sense of a service partner:
+                we support you through each stage while
+                you remain the publisher of record
+                and keep your rights.
               </p>
 
               <div className="mt-9 grid gap-4 sm:grid-cols-2">
                 {[
-                  "Thoughtful book presentation",
-                  "Print & digital preparation",
-                  "Platform publishing support",
-                  "A collaborative experience",
+                  "Traditional publishing",
+                  "Hybrid publishing",
+                  "Self-publishing",
+                  "Amazon publishing",
                 ].map((item) => (
                   <div
                     key={item}
@@ -569,11 +605,11 @@ export default function Overview() {
 
               <div className="absolute -bottom-7 left-3 max-w-[280px] rounded-2xl border border-gold/30 bg-[#171410] px-6 py-5 shadow-2xl sm:-left-7">
                 <p className="font-display text-2xl leading-tight text-gold italic">
-                  From idea to edition.
+                  You keep your rights.
                 </p>
 
                 <p className="mt-2 text-[10px] tracking-[.18em] text-ivory/50 uppercase">
-                  Made with intention
+                  Book Publishing Support
                 </p>
               </div>
             </div>
@@ -581,9 +617,9 @@ export default function Overview() {
         </div>
       </section>
 
-      {/* ================================== */}
-      {/* 3 — PUBLISHING SERVICES */}
-      {/* ================================== */}
+      {/* ==================================
+          3 — PUBLISHING SERVICES
+      ================================== */}
 
       <section
         id="publishing-services"
@@ -596,24 +632,23 @@ export default function Overview() {
         <div className="wrap relative">
           <SectionHead
             tone="light"
-            eyebrow="The publishing collection"
+            eyebrow="Book Publishing Services"
             title={
               <>
-                Everything Your Book
+                Publishing
                 <br />
-                Needs to{" "}
                 <em className="text-sheen italic">
-                  Find Its Place.
+                  Services.
                 </em>
               </>
             }
-            text="Explore publishing solutions tailored to different formats, platforms and stages of your author journey."
+            text="Choose your publishing path, prepare your manuscript, create professional files and reach readers through print, e-book and audiobook formats."
           />
 
           <div className="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {SERVICES.map((service, index) => (
               <PublishingCard
-                key={service.path}
+                key={service.number}
                 service={service}
                 index={index}
               />
@@ -622,9 +657,9 @@ export default function Overview() {
         </div>
       </section>
 
-      {/* ================================== */}
-      {/* 4 — QUOTE / BRAND MOMENT */}
-      {/* ================================== */}
+      {/* ==================================
+          4 — PUBLISHING STATEMENT
+      ================================== */}
 
       <section className="relative overflow-hidden border-y border-gold/20 bg-[#211b15] py-24 text-center md:py-32">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(198,163,106,.12),transparent_65%)]" />
@@ -636,10 +671,10 @@ export default function Overview() {
             </span>
 
             <h2 className="mx-auto -mt-3 max-w-4xl font-display text-[clamp(2.1rem,4.5vw,4.6rem)] leading-[1.2] font-medium text-ivory">
-              A great book isn't simply finished.
+              You keep your rights
               <br />
               <em className="text-gold italic">
-                It's brought to life.
+                and your creative control.
               </em>
             </h2>
 
@@ -652,24 +687,24 @@ export default function Overview() {
         </div>
       </section>
 
-      {/* ================================== */}
-      {/* 5 — PUBLISHING JOURNEY */}
-      {/* ================================== */}
+      {/* ==================================
+          5 — PUBLISHING PROCESS
+      ================================== */}
 
       <section className="bg-[#f6f1e8] py-24 md:py-36">
         <div className="wrap">
           <SectionHead
-            eyebrow="The journey from draft to book"
+            eyebrow="Publish My Book"
             title={
               <>
-                Four Chapters.
+                How We Help You
                 <br />
                 <em className="text-gold-dark italic">
-                  One Remarkable Journey.
+                  Publish Your Book.
                 </em>
               </>
             }
-            text="Every book deserves a considered path to publication. Here's how we help shape that journey."
+            text="Many authors simply search publish my book because they want a clear next step. Here is how we help."
           />
 
           <div className="relative mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -683,7 +718,7 @@ export default function Overview() {
                   <div className="mt-8 h-px w-full bg-[#e7dccc]" />
 
                   <p className="mt-7 text-[10px] font-bold tracking-[.2em] text-gold-dark uppercase">
-                    Chapter {step.n}
+                    Step {step.n}
                   </p>
 
                   <h3 className="mt-3 font-display text-2xl font-semibold text-ink">
@@ -700,9 +735,9 @@ export default function Overview() {
         </div>
       </section>
 
-      {/* ================================== */}
-      {/* 6 — AUTHOR OWNERSHIP */}
-      {/* ================================== */}
+      {/* ==================================
+          6 — WHY CHOOSE WORDSMITH SQUAD
+      ================================== */}
 
       <section className="relative overflow-hidden bg-[#15130f] py-24 md:py-36">
         <div className="wrap grid items-center gap-14 lg:grid-cols-[.95fr_1.05fr] lg:gap-24">
@@ -718,11 +753,11 @@ export default function Overview() {
 
             <div className="absolute -right-3 -bottom-5 rounded-2xl border border-gold/25 bg-[#1c1812] px-6 py-4 shadow-2xl sm:-right-6">
               <p className="font-display text-2xl text-gold italic">
-                Your vision first.
+                You keep your rights.
               </p>
 
               <p className="mt-1 text-[10px] tracking-[.15em] text-ivory/50 uppercase">
-                An author-centered approach
+                Why Choose Wordsmith Squad
               </p>
             </div>
           </Reveal>
@@ -730,33 +765,36 @@ export default function Overview() {
           <div>
             <Reveal>
               <Eyebrow tone="light">
-                Your story remains yours
+                Why Choose Wordsmith Squad
               </Eyebrow>
 
               <h2 className="mt-7 font-display text-[clamp(2.7rem,5vw,5rem)] leading-[1.08] text-ivory">
-                Your Name.
+                Honest Guidance.
                 <br />
-                Your Vision.
+                Full Ownership.
                 <br />
                 <em className="text-sheen italic">
-                  Your Legacy.
+                  Transparent Pricing.
                 </em>
               </h2>
             </Reveal>
 
             <Reveal delay={130}>
               <p className="mt-8 max-w-xl text-base leading-8 text-ivory/60">
-                Publishing should empower the person behind the
-                story. We believe in transparent conversations,
-                informed choices and creative collaboration
-                throughout the process.
+                Wordsmith Squad provides honest guidance on
+                every option, including those we don't sell.
+                You keep your rights and your files, with
+                a full-service team for writing, editing,
+                formatting and publishing.
               </p>
 
               <div className="mt-9 space-y-4">
                 {[
-                  "Your creative direction comes first",
-                  "Clear conversations about platforms and options",
-                  "Professional attention to the final presentation",
+                  "Honest guidance on every option, including those we don't sell",
+                  "You keep your rights and your files",
+                  "Transparent pricing with no hidden fees",
+                  "A full-service team for writing, editing, formatting and publishing",
+                  "Strict confidentiality through a signed NDA",
                 ].map((text) => (
                   <div
                     key={text}
@@ -775,7 +813,7 @@ export default function Overview() {
 
               <div className="mt-10">
                 <Button to="/about" variant="outline-light">
-                  Discover Our Philosophy
+                  Discover Our Story
                 </Button>
               </div>
             </Reveal>
@@ -783,9 +821,9 @@ export default function Overview() {
         </div>
       </section>
 
-      {/* ================================== */}
-      {/* 7 — FINAL CALL TO ACTION */}
-      {/* ================================== */}
+      {/* ==================================
+          7 — FINAL CTA
+      ================================== */}
 
       <section className="relative overflow-hidden bg-[#c6a36a] py-24 text-center md:py-32">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,.22),transparent_65%)]" />
@@ -800,24 +838,27 @@ export default function Overview() {
         <div className="wrap relative">
           <Reveal>
             <p className="text-[11px] font-bold tracking-[.3em] text-[#38291a] uppercase">
-              Your next chapter starts here
+              Ready to Publish Your Book?
             </p>
 
             <h2 className="mx-auto mt-7 max-w-4xl font-display text-[clamp(2.9rem,6vw,6.5rem)] leading-[1.05] font-semibold tracking-[-.04em] text-[#17130e]">
-              The World Is Waiting
+              Ready to Publish
               <br />
-              for <em className="italic">Your Story.</em>
+              <em className="italic">
+                Your Book?
+              </em>
             </h2>
 
             <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-[#3e3020] sm:text-lg">
-              You've put your heart into the writing.
-              Let's discuss how to bring your book to life
-              with confidence, care and beautiful craftsmanship.
+              Not sure which publishing path is right
+              for you? Book a free consultation and
+              we'll recommend a path based on your
+              goals, budget and timeline.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Button to="/contact" variant="ink">
-                Get a Free Consultation
+                Book Your Free Consultation
               </Button>
 
               <Link

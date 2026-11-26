@@ -17,3 +17,7 @@ To edit a subpage, edit that subpage's own `page` object. To customize every sub
 The newly created subpages have starter copy, not finished service-specific marketing content. Existing main pages have been preserved. Old `/explore/...` links automatically redirect.
 
 Run: `npm install` and `npm run dev`.
+
+
+<!-- run website
+npx vercel dev  -->

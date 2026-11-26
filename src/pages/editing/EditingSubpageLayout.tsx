@@ -1,6 +1,11 @@
 
 import { Link } from "react-router-dom";
-import { Button, Eyebrow, Reveal, usePageMeta } from "@/components/ui";
+import {
+  Button,
+  Eyebrow,
+  Reveal,
+  usePageMeta,
+} from "@/components/ui";
 import { FinalCTA } from "@/components/Sections";
 
 export type EditingSection = {
@@ -31,6 +36,23 @@ export type EditingPageData = {
   faqs: EditingFAQ[];
 };
 
+// Smoothly scroll without changing the HashRouter URL.
+function scrollToSection(id: string) {
+  const element = document.getElementById(id);
+
+  if (!element) return;
+
+  const top =
+    element.getBoundingClientRect().top +
+    window.scrollY -
+    110;
+
+  window.scrollTo({
+    top,
+    behavior: "smooth",
+  });
+}
+
 export default function EditingSubpageLayout({
   data,
 }: {
@@ -58,7 +80,9 @@ export default function EditingSubpageLayout({
           overflow: clip;
         }
 
-        .ws-edit-page * { box-sizing: border-box; }
+        .ws-edit-page * {
+          box-sizing: border-box;
+        }
 
         .ws-wrap {
           width: min(1160px, calc(100% - 48px));
@@ -84,14 +108,21 @@ export default function EditingSubpageLayout({
           text-transform: uppercase;
         }
 
-        /* UNIQUE HERO */
-
         .ws-sub-hero {
           position: relative;
           padding: 145px 0 85px;
           background:
-            radial-gradient(ellipse at 80% 35%, rgba(177,133,72,.16), transparent 43%),
-            linear-gradient(120deg,#100e0c,#201a13 65%,#11100e);
+            radial-gradient(
+              ellipse at 80% 35%,
+              rgba(177,133,72,.16),
+              transparent 43%
+            ),
+            linear-gradient(
+              120deg,
+              #100e0c,
+              #201a13 65%,
+              #11100e
+            );
           isolation: isolate;
         }
 
@@ -101,7 +132,11 @@ export default function EditingSubpageLayout({
           inset: 0;
           z-index: -1;
           opacity: .2;
-          background-image: radial-gradient(rgba(198,163,109,.7) .6px,transparent .6px);
+          background-image:
+            radial-gradient(
+              rgba(198,163,109,.7) .6px,
+              transparent .6px
+            );
           background-size: 9px 9px;
         }
 
@@ -118,7 +153,9 @@ export default function EditingSubpageLayout({
           transition: opacity .3s;
         }
 
-        .ws-breadcrumb a:hover { opacity: .6; }
+        .ws-breadcrumb a:hover {
+          opacity: .6;
+        }
 
         .ws-hero-grid {
           display: grid;
@@ -168,6 +205,21 @@ export default function EditingSubpageLayout({
           align-items: center;
           gap: 14px;
           margin-top: 30px;
+        }
+
+        .ws-explore-button {
+          border: 0;
+          background: transparent;
+          color: #d6b783;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: .08em;
+          cursor: pointer;
+          transition: color .3s;
+        }
+
+        .ws-explore-button:hover {
+          color: white;
         }
 
         .ws-hero-visual {
@@ -244,8 +296,6 @@ export default function EditingSubpageLayout({
           letter-spacing: .14em;
         }
 
-        /* CONTENT AREA */
-
         .ws-content-area {
           padding: 95px 0 110px;
           background: #eee7db;
@@ -276,18 +326,27 @@ export default function EditingSubpageLayout({
           letter-spacing: .18em;
         }
 
-        .ws-content-nav a {
+        .ws-content-nav button {
           display: block;
+          width: 100%;
           padding: 11px 0;
+          border: 0;
           border-top: 1px solid #dfd5c6;
+          background: transparent;
           color: #65594b;
           font-size: 10px;
           line-height: 1.5;
+          text-align: left;
+          cursor: pointer;
           transition: color .25s,padding .25s;
         }
 
-        .ws-content-nav a:hover {
+        .ws-content-nav button:hover {
           padding-left: 5px;
+          color: #a27c4c;
+        }
+
+        .ws-content-nav button.active {
           color: #a27c4c;
         }
 
@@ -310,7 +369,8 @@ export default function EditingSubpageLayout({
         .ws-article-section h2 {
           margin: 12px 0 20px;
           color: #241d16;
-          font: 400 clamp(27px,3.4vw,39px)/1.2 "Playfair Display",Georgia,serif;
+          font: 400 clamp(27px,3.4vw,39px)/1.2
+            "Playfair Display",Georgia,serif;
           letter-spacing: -.04em;
         }
 
@@ -368,8 +428,6 @@ export default function EditingSubpageLayout({
           font-size: 20px;
         }
 
-        /* EDITORIAL QUOTE */
-
         .ws-quote {
           position: relative;
           margin: 35px 0;
@@ -379,8 +437,6 @@ export default function EditingSubpageLayout({
           color: #70563a;
           font: italic 21px/1.55 Georgia,serif;
         }
-
-        /* FAQ */
 
         .ws-faq {
           padding: 90px 0;
@@ -452,7 +508,10 @@ export default function EditingSubpageLayout({
 
         @media(max-width:850px) {
           .ws-hero-grid { gap: 30px; }
-          .ws-content-grid { grid-template-columns: 190px 1fr; gap: 30px; }
+          .ws-content-grid {
+            grid-template-columns: 190px 1fr;
+            gap: 30px;
+          }
           .ws-hero-visual { min-height: 330px; }
         }
 
@@ -464,15 +523,23 @@ export default function EditingSubpageLayout({
             gap: 25px;
             margin-top: 45px;
           }
-          .ws-hero-copy h1 { font-size: clamp(48px,12vw,65px); }
+          .ws-hero-copy h1 {
+            font-size: clamp(48px,12vw,65px);
+          }
           .ws-hero-copy > p { font-size: 11px; }
           .ws-hero-visual { min-height: 330px; }
-          .ws-hero-visual img { left: 45px; width: calc(100% - 45px); }
+          .ws-hero-visual img {
+            left: 45px;
+            width: calc(100% - 45px);
+          }
           .ws-floating-card { left: -4px; top: 30px; }
           .ws-image-label { left: 60px; }
           .ws-hero-bottom { margin-top: 35px; font-size: 7px; }
           .ws-content-area { padding: 65px 0; }
-          .ws-content-grid { grid-template-columns: 1fr; gap: 35px; }
+          .ws-content-grid {
+            grid-template-columns: 1fr;
+            gap: 35px;
+          }
           .ws-content-nav {
             position: static;
             display: grid;
@@ -480,7 +547,10 @@ export default function EditingSubpageLayout({
             gap: 0 15px;
           }
           .ws-content-nav > span { grid-column: 1/-1; }
-          .ws-article-section { padding-bottom: 30px; margin-bottom: 30px; }
+          .ws-article-section {
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+          }
           .ws-article-section h2 { font-size: 29px; }
           .ws-article-section p { font-size: 11px; }
           .ws-subsection { padding: 17px; }
@@ -505,7 +575,7 @@ export default function EditingSubpageLayout({
           <div className="ws-breadcrumb">
             <Link to="/">Home</Link>
             <span>/</span>
-            <Link to="/explore/editing">Editing</Link>
+            <Link to="/editing">Editing</Link>
             <span>/</span>
             <span>{data.title}</span>
           </div>
@@ -526,22 +596,28 @@ export default function EditingSubpageLayout({
               <p>{data.description}</p>
 
               <div className="ws-hero-buttons">
-                <Button to="/contact">Discuss Your Project</Button>
-                <a
-                  href="#page-content"
-                  className="text-xs font-semibold tracking-wider text-[#d6b783] transition-colors hover:text-white"
+                <Button to="/contact">
+                  Discuss Your Project
+                </Button>
+
+                <button
+                  type="button"
+                  className="ws-explore-button"
+                  onClick={() => scrollToSection("page-content")}
                 >
                   EXPLORE THE DETAILS ↓
-                </a>
+                </button>
               </div>
             </div>
 
             <div className="ws-hero-visual">
               <img src={data.image} alt={data.imageAlt} />
+
               <div className="ws-floating-card">
                 <strong>{data.number}</strong>
                 <span>WORDSMITH EDITORIAL COLLECTION</span>
               </div>
+
               <div className="ws-image-label">
                 <span>THE ART OF REFINEMENT</span>
                 <span>WS / {data.number}</span>
@@ -562,12 +638,23 @@ export default function EditingSubpageLayout({
         <div className="ws-wrap ws-content-grid">
           <aside className="ws-content-nav">
             <span>IN THIS CHAPTER</span>
+
             {contents.map((item, index) => (
-              <a key={item.id} href={`#${item.id}`}>
+              <button
+                type="button"
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+              >
                 {String(index + 1).padStart(2, "0")} — {item.title}
-              </a>
+              </button>
             ))}
-            <a href="#editing-faq">FAQs</a>
+
+            <button
+              type="button"
+              onClick={() => scrollToSection("editing-faq")}
+            >
+              FAQs
+            </button>
           </aside>
 
           <article>
@@ -598,13 +685,15 @@ export default function EditingSubpageLayout({
                   {section.subsections?.map((sub, i) => (
                     <div className="ws-subsection" key={i}>
                       <h3>{sub.heading}</h3>
-                      {sub.paragraphs?.map((p, j) => (
-                        <p key={j}>{p}</p>
+
+                      {sub.paragraphs?.map((paragraph, j) => (
+                        <p key={j}>{paragraph}</p>
                       ))}
+
                       {sub.bullets && (
                         <ul>
-                          {sub.bullets.map((b, j) => (
-                            <li key={j}>{b}</li>
+                          {sub.bullets.map((bullet, j) => (
+                            <li key={j}>{bullet}</li>
                           ))}
                         </ul>
                       )}
@@ -627,7 +716,10 @@ export default function EditingSubpageLayout({
         <div className="ws-wrap">
           <Reveal>
             <div className="ws-faq-heading">
-              <span className="ws-kicker">A FEW THINGS WORTH KNOWING</span>
+              <span className="ws-kicker">
+                A FEW THINGS WORTH KNOWING
+              </span>
+
               <h2 className="ws-display">
                 Frequently Asked <em>Questions.</em>
               </h2>
@@ -650,8 +742,7 @@ export default function EditingSubpageLayout({
       <FinalCTA
         title={
           <>
-            Let's Bring Your
-            {" "}
+            Let's Bring Your{" "}
             <em className="italic">Book to Life.</em>
           </>
         }

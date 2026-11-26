@@ -5,166 +5,197 @@ import PublishingDetailLayout, {
 
 import { EDITORIAL } from "@/lib/data";
 
+/**
+ * WORDSMITH SQUAD
+ * Audiobook Publishing
+ *
+ * Approved SEO Content Source:
+ * Wordssmith Squad SEO for website.pdf
+ * Pages 57–59
+ *
+ * Original PublishingDetailLayout,
+ * styling, animations, hero image
+ * and component structure retained.
+ *
+ * Page content is sourced from the SEO PDF.
+ */
+
 const page: PublishingPageContent = {
   title: "Audiobook Publishing",
 
-  subtitle: "Professional Audiobook Publishing Services",
+  subtitle: "Publish Your Book in Digital and Audio Formats",
 
   intro:
-    "Professional audiobook publishing support designed to bring your written work to life through engaging audio experiences.",
+    "Readers today buy books on phones, tablets and e-readers, and many prefer to listen. Offering both formats widens your audience and creates more ways for readers to find you. At Wordsmith Squad, we help you create and publish professional e-books and audiobooks, and you keep ownership of your work.",
 
   heroImage: EDITORIAL.desk,
 
-  heroEyebrow: "Professional Publishing Services",
+  heroEyebrow: "eBook & Audiobook Publishing Services",
 
   sections: [
     {
-      id: "audiobook-overview",
-      title: "Explore Audiobook Publishing",
+      id: "audiobook-introduction",
+
+      title: "Audio Book",
+
       blocks: [
         {
           type: "paragraph",
-          text: "Audiobook Publishing calls for more than simply converting written content into audio. It requires thoughtful planning, suitable narration, careful production and an understanding of the listening experience.",
+          text:
+            "An audio book lets readers enjoy your story during commutes, workouts and chores, which opens your book to an audience that may never sit down with a print copy.",
         },
         {
           type: "paragraph",
-          text: "At Wordsmith Squad, we begin by understanding your manuscript, audience and publishing objectives. We help shape an audiobook production approach that respects your original message while making it engaging for listeners.",
-        },
-        {
-          type: "paragraph",
-          text: "Whether you are publishing your first audiobook or expanding an existing catalogue, our approach is designed to make the process clear, organized and manageable.",
+          text:
+            "Audio is also a strong fit for business books, memoirs, self-help and fiction series, since listeners often follow an author from one title to the next.",
         },
       ],
     },
 
     {
-      id: "audiobook-importance",
-      title: "Why Audiobook Publishing Matters",
+      id: "audiobook-narration",
+
+      title: "Audiobook Narration",
+
       blocks: [
         {
           type: "paragraph",
-          text: "Audiobooks give readers another way to experience stories, ideas and information. They allow audiences to enjoy books while commuting, exercising or managing everyday activities.",
+          text:
+            "Great audiobook narration keeps listeners engaged for hours. A skilled narrator brings out tone, pacing and emotion, and gives each character a clear voice.",
         },
         {
           type: "paragraph",
-          text: "A professionally prepared audiobook combines clear narration, consistent audio quality and thoughtful presentation to create a better listening experience.",
+          text:
+            "You can narrate your own book, which works well for memoirs and personal brands, or hire a professional narrator. We help you decide, and we can arrange professional recording and review.",
+        },
+      ],
+    },
+
+    {
+      id: "audiobook-publishing",
+
+      title: "Audiobook Publishing",
+
+      blocks: [
+        {
+          type: "paragraph",
+          text:
+            "Audiobook publishing involves more than recording. Files must be edited, mastered and checked to meet platform quality standards, and you need cover art in the right format and a clear distribution plan.",
         },
         {
-          type: "bullets",
-          items: [
-            "Reach audiences who prefer listening to reading.",
-            "Make your written content available in another format.",
-            "Create additional opportunities for book distribution.",
-            "Deliver clear and engaging narration.",
-            "Build a consistent audio identity for your publication.",
-          ],
+          type: "paragraph",
+          text:
+            "We help prepare your finished files for the platforms you choose.",
         },
       ],
     },
 
     {
       id: "audiobook-services",
-      title: "What Our Audiobook Publishing Service Can Include",
+
+      title: "Audiobook Publishing Services",
+
       blocks: [
         {
           type: "paragraph",
-          text: "Every audiobook project has different requirements. We discuss your manuscript, narration preferences and production expectations before defining the project scope.",
+          text:
+            "Our audiobook publishing services can include:",
         },
         {
           type: "bullets",
           items: [
-            "Initial manuscript and project assessment.",
-            "Audiobook production planning.",
-            "Narrator selection and voice direction.",
-            "Audio recording and narration coordination.",
-            "Audio editing and sound quality refinement.",
-            "Chapter organization and audio preparation.",
-            "Final quality review and publishing preparation.",
+            "Narrator selection or coaching",
+            "Recording and editing coordination",
+            "Audio mastering and quality checks",
+            "Retail-ready file preparation",
+            "Platform setup and distribution guidance",
           ],
         },
       ],
     },
 
     {
-      id: "audiobook-process",
-      title: "A Collaborative Process",
-      blocks: [
-        {
-          type: "heading",
-          text: "Understand Your Manuscript",
-        },
-        {
-          type: "paragraph",
-          text: "We review your material, intended audience, preferred narration style and overall audiobook objectives.",
-        },
-        {
-          type: "heading",
-          text: "Plan the Production",
-        },
-        {
-          type: "paragraph",
-          text: "We establish the production requirements, narration approach, project milestones and expected deliverables.",
-        },
-        {
-          type: "heading",
-          text: "Develop the Audio",
-        },
-        {
-          type: "paragraph",
-          text: "The narration and audio production are developed according to the agreed creative direction and quality expectations.",
-        },
-        {
-          type: "heading",
-          text: "Review and Refine",
-        },
-        {
-          type: "paragraph",
-          text: "We review the audio for clarity, consistency, organization and overall listening quality.",
-        },
-        {
-          type: "heading",
-          text: "Prepare for Publishing",
-        },
-        {
-          type: "paragraph",
-          text: "The completed audiobook files are prepared according to the agreed publishing and delivery requirements.",
-        },
-      ],
-    },
+      id: "how-to-publish-an-audiobook",
 
-    {
-      id: "audiobook-audience",
-      title: "Who Can Benefit from Audiobook Publishing?",
+      title: "How to Publish an Audiobook",
+
       blocks: [
         {
           type: "paragraph",
-          text: "Audiobook publishing can support authors, professionals, businesses and organizations looking to make their content accessible to audio-first audiences.",
+          text:
+            "Wondering how to publish an audiobook? Here are the main steps:",
         },
         {
-          type: "bullets",
+          type: "steps",
           items: [
-            "Independent authors expanding their book formats.",
-            "Fiction writers creating narrated storytelling experiences.",
-            "Business professionals sharing knowledge and expertise.",
-            "Educators developing audio learning resources.",
-            "Publishers expanding their existing catalogues.",
+            {
+              title: "01. Finish Your Book",
+              text:
+                "Audio is usually produced from a final, edited manuscript.",
+            },
+            {
+              title: "02. Prepare the Script",
+              text:
+                "Remove anything that doesn’t work out loud, such as visual references.",
+            },
+            {
+              title: "03. Choose a Narrator",
+              text:
+                "Yourself or a professional.",
+            },
+            {
+              title: "04. Record and Edit",
+              text:
+                "Clean audio with consistent volume and no background noise.",
+            },
+            {
+              title: "05. Meet Platform Requirements",
+              text:
+                "Each retailer has technical standards.",
+            },
+            {
+              title: "06. Choose Distribution",
+              text:
+                "Exclusive or wide distribution affects royalties and reach, so read each platform’s terms before you commit.",
+            },
+            {
+              title: "07. Publish and Promote",
+              text:
+                "Reach listeners through your audience, reviews and promotions.",
+            },
           ],
         },
       ],
     },
 
     {
-      id: "audiobook-contact",
-      title: "Ready to Discuss Your Project?",
+      id: "why-choose-wordsmith-squad",
+
+      title: "Why Choose Wordsmith Squad",
+
+      blocks: [
+        {
+          type: "bullets",
+          items: [
+            "Digital and audio expertise in one place",
+            "Quality checks on every file",
+            "You keep your rights",
+            "Clear guidance on platform choices",
+            "Strict confidentiality",
+          ],
+        },
+      ],
+    },
+
+    {
+      id: "ready-to-publish-audiobook",
+
+      title: "Ready to Publish Your E-book or Audiobook?",
+
       blocks: [
         {
           type: "paragraph",
-          text: "Have a manuscript ready for its audio edition? Tell us about your book, your audience and your publishing goals. We can discuss a suitable production approach for your audiobook.",
-        },
-        {
-          type: "callout",
-          title: "Your Story Deserves to Be Heard.",
-          text: "Let's transform your written work into an engaging listening experience with thoughtful audiobook publishing support.",
+          text: "Get a Free Quote",
         },
       ],
     },
@@ -172,34 +203,22 @@ const page: PublishingPageContent = {
 
   faqs: [
     {
-      question: "What is included in audiobook publishing?",
+      question:
+        "Can I turn my existing book into an audiobook?",
       answer:
-        "Depending on your project, services can include production planning, narration coordination, audio editing, quality review and publishing preparation.", 
+        "Yes. Most audiobooks are made from books already published in print or e-book form.",
     },
     {
-      question: "Can I choose my audiobook narrator?",
+      question:
+        "Should I narrate my own audiobook?",
       answer:
-        "Narration preferences can be discussed during planning. The suitable voice depends on your content, audience and creative direction.",
+        "It depends. Authors often narrate memoirs and personal books well, but a professional is usually better for long, character-driven fiction.",
     },
     {
-      question: "Can you turn my existing book into an audiobook?",
+      question:
+        "How long does it take to produce an audiobook?",
       answer:
-        "Yes. Existing manuscripts and published books can be assessed for audiobook production.",
-    },
-    {
-      question: "How long does audiobook production take?",
-      answer:
-        "The timeline depends on manuscript length, narration requirements and production complexity.",
-    },
-    {
-      question: "Can I publish my audiobook on digital platforms?",
-      answer:
-        "We can discuss suitable distribution options and prepare the agreed audio materials according to platform requirements.",
-    },
-    {
-      question: "Do you guarantee audiobook sales?",
-      answer:
-        "No publishing service can guarantee sales. Professional production and suitable distribution can help prepare your audiobook for its intended audience.",
+        "It depends on length and narration.",
     },
   ],
 };

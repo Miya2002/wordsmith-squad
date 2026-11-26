@@ -1,11 +1,29 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui";
+
 import EditingSubpageLayout, {
   type EditingPageData,
 } from "@/pages/editing/EditingSubpageLayout";
 
 export type { EditingPageData };
+
+// Smooth scrolling without changing the HashRouter route.
+function scrollToGhostContent() {
+  const element = document.getElementById("page-content");
+
+  if (!element) return;
+
+  const top =
+    element.getBoundingClientRect().top +
+    window.scrollY -
+    100;
+
+  window.scrollTo({
+    top,
+    behavior: "smooth",
+  });
+}
 
 export default function GhostwritingSubpageLayout({
   data,
@@ -39,15 +57,20 @@ export default function GhostwritingSubpageLayout({
           background:
             radial-gradient(
               ellipse at 85% 40%,
-              rgba(174, 125, 62, .19),
+              rgba(174,125,62,.19),
               transparent 40%
             ),
             radial-gradient(
               ellipse at 10% 85%,
-              rgba(117, 76, 43, .12),
+              rgba(117,76,43,.12),
               transparent 35%
             ),
-            linear-gradient(135deg, #100e0c, #211910 55%, #100e0c);
+            linear-gradient(
+              135deg,
+              #100e0c,
+              #211910 55%,
+              #100e0c
+            );
         }
 
         .ghost-hero::before {
@@ -71,7 +94,7 @@ export default function GhostwritingSubpageLayout({
           right: -30px;
           bottom: 20px;
           color: rgba(198,163,109,.035);
-          font: 400 clamp(100px, 20vw, 260px)/1 Georgia, serif;
+          font: 400 clamp(100px,20vw,260px)/1 Georgia,serif;
           letter-spacing: -.08em;
           pointer-events: none;
         }
@@ -111,7 +134,7 @@ export default function GhostwritingSubpageLayout({
           gap: 14px;
           margin-bottom: 27px;
           color: var(--ghost-gold);
-          font: italic 13px Georgia, serif;
+          font: italic 13px Georgia,serif;
         }
 
         .ghost-kicker::after {
@@ -153,8 +176,8 @@ export default function GhostwritingSubpageLayout({
           max-width: 760px;
           margin: 0;
           color: #f0e8dc;
-          font: 400 clamp(48px, 6.3vw, 82px)/1.04
-            "Playfair Display", Georgia, serif;
+          font: 400 clamp(48px,6.3vw,82px)/1.04
+            "Playfair Display",Georgia,serif;
           letter-spacing: -.065em;
         }
 
@@ -179,19 +202,20 @@ export default function GhostwritingSubpageLayout({
         }
 
         .ghost-explore {
+          border: 0;
+          padding: 0;
+          background: transparent;
           color: var(--ghost-gold);
           font-size: 11px;
           font-weight: 700;
           letter-spacing: .12em;
-          text-decoration: none;
+          cursor: pointer;
           transition: color .3s;
         }
 
         .ghost-explore:hover {
           color: white;
         }
-
-        /* UNIQUE STORY VISUAL */
 
         .ghost-art {
           position: relative;
@@ -220,13 +244,18 @@ export default function GhostwritingSubpageLayout({
 
         .ghost-manuscript {
           position: relative;
-          width: min(310px, 80%);
+          width: min(310px,80%);
           min-height: 355px;
           padding: 34px 29px;
           transform: rotate(-5deg);
           border: 1px solid rgba(198,163,109,.42);
           background:
-            linear-gradient(145deg, #30251a, #19140f 65%, #100e0c);
+            linear-gradient(
+              145deg,
+              #30251a,
+              #19140f 65%,
+              #100e0c
+            );
           box-shadow: 25px 30px 75px rgba(0,0,0,.55);
           transition: transform .5s;
         }
@@ -245,7 +274,8 @@ export default function GhostwritingSubpageLayout({
         .ghost-manuscript h2 {
           margin-top: 55px;
           color: #eee3d3;
-          font: 400 34px/1.2 "Playfair Display", Georgia, serif;
+          font: 400 34px/1.2
+            "Playfair Display",Georgia,serif;
         }
 
         .ghost-manuscript h2 em {
@@ -300,7 +330,7 @@ export default function GhostwritingSubpageLayout({
         .ghost-floating strong {
           display: block;
           color: var(--ghost-gold);
-          font: 27px Georgia, serif;
+          font: 27px Georgia,serif;
         }
 
         .ghost-floating small {
@@ -333,8 +363,6 @@ export default function GhostwritingSubpageLayout({
           letter-spacing: .17em;
         }
 
-        /* HIDE THE OLD EDITORIAL HERO, KEEP ITS CONTENT */
-
         .ws-ghostwriting-content .ws-sub-hero {
           display: none !important;
         }
@@ -360,7 +388,7 @@ export default function GhostwritingSubpageLayout({
           }
         }
 
-        @media(max-width: 850px) {
+        @media(max-width:850px) {
           .ghost-grid {
             gap: 30px;
           }
@@ -380,7 +408,7 @@ export default function GhostwritingSubpageLayout({
           }
         }
 
-        @media(max-width: 650px) {
+        @media(max-width:650px) {
           .ghost-wrap {
             width: calc(100% - 34px);
           }
@@ -396,7 +424,7 @@ export default function GhostwritingSubpageLayout({
           }
 
           .ghost-title {
-            font-size: clamp(45px, 12vw, 65px);
+            font-size: clamp(45px,12vw,65px);
           }
 
           .ghost-description {
@@ -432,7 +460,7 @@ export default function GhostwritingSubpageLayout({
           }
         }
 
-        @media(prefers-reduced-motion: reduce) {
+        @media(prefers-reduced-motion:reduce) {
           .ws-ghostwriting-page *,
           .ws-ghostwriting-page *::before,
           .ws-ghostwriting-page *::after {
@@ -443,9 +471,13 @@ export default function GhostwritingSubpageLayout({
         }
       `}</style>
 
+      {/* GHOSTWRITING HERO */}
       <section className="ghost-hero">
         <div className="ghost-wrap">
-          <nav className="ghost-breadcrumb" aria-label="Breadcrumb">
+          <nav
+            className="ghost-breadcrumb"
+            aria-label="Breadcrumb"
+          >
             <Link to="/">Home</Link>
             <span>/</span>
             <Link to="/ghostwriting">Ghostwriting</Link>
@@ -464,7 +496,8 @@ export default function GhostwritingSubpageLayout({
               </div>
 
               <h1 className="ghost-title">
-                {data.title}<span>.</span>
+                {data.title}
+                <span>.</span>
               </h1>
 
               <p className="ghost-description">
@@ -472,11 +505,17 @@ export default function GhostwritingSubpageLayout({
               </p>
 
               <div className="ghost-actions">
-                <Button to="/contact">Discuss Your Project</Button>
+                <Button to="/contact">
+                  Discuss Your Project
+                </Button>
 
-                <a href="#page-content" className="ghost-explore">
+                <button
+                  type="button"
+                  className="ghost-explore"
+                  onClick={scrollToGhostContent}
+                >
                   EXPLORE THE DETAILS ↓
-                </a>
+                </button>
               </div>
             </div>
 
@@ -496,8 +535,9 @@ export default function GhostwritingSubpageLayout({
                 </h2>
 
                 <p>
-                  Ideas become narratives. Experiences become chapters.
-                  Your vision becomes a story shaped with purpose.
+                  Ideas become narratives. Experiences become
+                  chapters. Your vision becomes a story shaped
+                  with purpose.
                 </p>
 
                 <div className="ghost-lines">
@@ -508,9 +548,14 @@ export default function GhostwritingSubpageLayout({
                 </div>
               </div>
 
-              
+              <div className="ghost-floating">
+                <strong>{data.number}</strong>
+                <small>STORYTELLING COLLECTION</small>
+              </div>
 
-              
+              <div className="ghost-art-caption">
+                EVERY STORY MATTERS
+              </div>
             </div>
           </div>
 
@@ -522,7 +567,8 @@ export default function GhostwritingSubpageLayout({
         </div>
       </section>
 
-      <div className="ws-ghostwriting-content" id="page-content">
+      {/* SHARED ARTICLE CONTENT AND SIDEBAR */}
+      <div className="ws-ghostwriting-content">
         <EditingSubpageLayout data={data} />
       </div>
     </div>

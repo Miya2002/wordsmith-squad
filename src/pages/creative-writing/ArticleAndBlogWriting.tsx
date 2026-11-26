@@ -1,19 +1,178 @@
-import EditingSubpageLayout, { type EditingPageData } from "@/pages/editing/EditingSubpageLayout";
+
+import EditingSubpageLayout, {
+  type EditingPageData,
+} from "@/pages/editing/EditingSubpageLayout";
+
 import { EDITORIAL } from "@/lib/data";
 
-// Separate content file for this subpage. Update this data without affecting its main page or other subpages.
+/**
+ * WORDSMITH SQUAD
+ * Article Writing Services
+ *
+ * Source: Approved Wordsmith Squad SEO PDF
+ *
+ * Existing layout retained.
+ */
+
 const data: EditingPageData = {
- title: 'Article and Blog Writing',
- subtitle: 'Professional Article and Blog Writing Services',
- number: '03',
- image: EDITORIAL.desk,
- imageAlt: 'Editorial workspace for Article and Blog Writing',
- accent: "gold",
- description: 'Article and Blog Writing support shaped around your project, audience and publishing goals.',
- sections: [{"heading": "Explore Article and Blog Writing", "paragraphs": ["Article and Blog Writing calls for more than a one-size-fits-all approach. The right decisions depend on the purpose of your project, the people you want to reach and the experience you want them to have.", "At Wordsmith Squad, we begin by understanding your brief, source material and expectations. We then shape a practical plan that keeps the work aligned with your voice while giving the final result clarity, structure and consistency.", "Whether you are starting with an early idea or refining an established project, our article and blog writing service is designed to make the next steps easier to understand and manage."]}, {"heading": "Why Article and Blog Writing Matters", "paragraphs": ["A well-planned article and blog writing project gives your ideas a stronger foundation. It helps establish a clear direction, reduces avoidable revisions and makes the final work more useful to its intended audience.", "We pay attention to the details that influence quality: purpose, tone, structure, accuracy, consistency and presentation. Each decision is considered in the context of your specific brief."], "bullets": ["A clear direction based on your goals and audience.", "A structure that makes information easy to follow.", "Consistent tone, terminology and presentation.", "Thoughtful review at important project stages.", "A final result prepared around the agreed requirements."]}, {"heading": "What Our Article and Blog Writing Service Can Include", "paragraphs": ["The scope is tailored to the type of material you are developing. We discuss the deliverables with you before work begins so the project has a shared and realistic direction."], "bullets": ["Initial discussion and project assessment.", "Planning and development of the core material.", "Refinement for clarity, flow and consistency.", "Review against your brief and intended audience.", "Final preparation and agreed revisions."]}, {"heading": "A Collaborative Process", "subsections": [{"heading": "Understand the Brief", "paragraphs": ["We learn about your objectives, audience, preferred style and any references or existing material relevant to your article and blog writing project."]}, {"heading": "Create a Practical Plan", "paragraphs": ["We outline the scope, milestones and expected deliverables so you know what will happen and when."]}, {"heading": "Develop and Refine", "paragraphs": ["The work is developed in stages, with attention to feedback, consistency and the requirements agreed at the start."]}, {"heading": "Review and Deliver", "paragraphs": ["We complete a final review and prepare the agreed files or materials for handover."]}]}, {"heading": "Who Can Benefit from Article and Blog Writing?", "paragraphs": ["This service can support first-time creators, experienced professionals, independent authors, businesses and organizations. The approach changes according to the subject, complexity and intended use of the work."]}, {"heading": "Ready to Discuss Your Project?", "paragraphs": ["Every project begins with a conversation. Tell us what you are creating, what stage you have reached and what outcome you have in mind. We can then discuss a suitable way forward for your article and blog writing needs."]}],
- faqs: [{"question": "What is included in Article and Blog Writing?", "answer": "The scope depends on your brief and project goals. We discuss the required deliverables, timeline and level of support before work begins."}, {"question": "Can the service be tailored to my project?", "answer": "Yes. We shape the process around your subject, audience, preferred style and the materials you provide."}, {"question": "Can I provide my own notes or draft?", "answer": "Absolutely. Existing drafts, outlines, research, notes and reference materials can help guide the work."}, {"question": "How long does the process take?", "answer": "Timing depends on the length, complexity and scope of the project. We agree on a realistic schedule after reviewing your requirements."}, {"question": "Will my project details be kept private?", "answer": "We treat client materials and project information with care and discuss confidentiality expectations as part of the project."}]
+  title: "Article Writing",
+
+  subtitle:
+    "Professional Article Writing Services for Businesses and Publishers",
+
+  number: "06",
+
+  image: EDITORIAL.desk,
+
+  imageAlt: "Professional article writing and editorial workspace",
+
+  accent: "gold",
+
+  description:
+    "Our article writing covers thought leadership pieces, industry features, how-to guides, opinion articles and publication submissions. We write in a professional, readable tone, with accurate research and a clear point of view.",
+
+  sections: [
+    {
+      heading: "Professional Article Writing Services",
+
+      paragraphs: [
+        "Our article writing services suit companies, consultants, executives and publishers who need regular, high-quality pieces.",
+
+        "We can provide a one-off article or an ongoing monthly schedule, and we can ghostwrite under your byline.",
+      ],
+    },
+
+    {
+      heading: "Article Writing",
+
+      paragraphs: [
+        "Our article writing covers thought leadership pieces, industry features, how-to guides, opinion articles and publication submissions.",
+
+        "We write in a professional, readable tone, with accurate research and a clear point of view.",
+      ],
+
+      bullets: [
+        "Thought leadership pieces",
+        "Industry features",
+        "How-to guides",
+        "Opinion articles",
+        "Publication submissions",
+      ],
+    },
+
+    {
+      heading: "Research and Topic Planning",
+
+      paragraphs: [
+        "Every article begins with a clear understanding of its audience and purpose. We research the topic, identify useful information and organize the material into a logical structure.",
+
+        "Our approach keeps the article accurate, readable and relevant to the people it is intended to reach.",
+      ],
+    },
+
+    {
+      heading: "Article Writing for Businesses and Publishers",
+
+      paragraphs: [
+        "Companies, consultants, executives and publishers often need a consistent flow of professional articles.",
+
+        "We can create individual pieces or work to an ongoing monthly schedule. Where required, articles can be ghostwritten under your byline.",
+      ],
+    },
+
+    {
+      heading: "How It Works",
+
+      subsections: [
+        {
+          heading: "01. Free Consultation",
+
+          paragraphs: [
+            "Tell us about your business, audience and goals.",
+          ],
+        },
+        {
+          heading: "02. Strategy and Topics",
+
+          paragraphs: [
+            "We suggest content types, topics and keywords.",
+          ],
+        },
+        {
+          heading: "03. Writing",
+
+          paragraphs: [
+            "Your writer drafts the content in your voice.",
+          ],
+        },
+        {
+          heading: "04. Review",
+
+          paragraphs: [
+            "You give feedback and we revise.",
+          ],
+        },
+        {
+          heading: "05. Delivery",
+
+          paragraphs: [
+            "You receive final, ready-to-publish content.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Why Choose Wordsmith Squad",
+
+      bullets: [
+        "Writers who understand your industry",
+        "SEO-aware content built for people first",
+        "Original, human-written work",
+        "Your brand voice applied consistently",
+        "Full ownership of everything we write",
+        "Strict confidentiality through a signed NDA",
+      ],
+    },
+
+    {
+      heading: "Ready to Create Professional Articles?",
+
+      paragraphs: [
+        "Whether you need a single article or an ongoing monthly content schedule, Wordsmith Squad can help you communicate your ideas clearly and professionally.",
+
+        "Get in touch to discuss your article writing requirements and receive a free content quote.",
+      ],
+    },
+  ],
+
+  faqs: [
+    {
+      question: "Do you write for my industry?",
+
+      answer:
+        "We match you with a writer who has relevant knowledge. For specialized topics, we work from your input and approved sources.",
+    },
+    {
+      question: "Can you guarantee Google rankings?",
+
+      answer:
+        "No. Rankings depend on many factors. We create high-quality, well-structured content that gives you the best chance.",
+    },
+    {
+      question: "Can you publish the content for me?",
+
+      answer: "Yes.",
+    },
+    {
+      question: "How much does it cost?",
+
+      answer:
+        "Pricing depends on word count and content type.",
+    },
+  ],
 };
 
 export default function ArticleAndBlogWriting() {
- return <EditingSubpageLayout data={data} />;
+  return <EditingSubpageLayout data={data} />;
 }

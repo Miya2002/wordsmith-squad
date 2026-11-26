@@ -1,21 +1,256 @@
+
 import GhostwritingSubpageLayout, {
   type EditingPageData,
 } from "@/pages/ghostwriting/GhostwritingSubpageLayout";
+
 import { EDITORIAL } from "@/lib/data";
 
-// Separate content file for this subpage. Update this data without affecting its main page or other subpages.
+/**
+ * WORDSMITH SQUAD
+ * Find a Literary Agent
+ *
+ * Approved SEO Content Source:
+ * Wordssmith Squad SEO for website.pdf
+ * Pages 50–52
+ *
+ * Existing layout, animations, styling,
+ * page number, image and components retained.
+ */
+
 const data: EditingPageData = {
- title: 'Find a Literary Agent',
- subtitle: 'Professional Find a Literary Agent Services',
- number: '19',
- image: EDITORIAL.desk,
- imageAlt: 'Editorial workspace for Find a Literary Agent',
- accent: "gold",
- description: 'Find a Literary Agent support shaped around your project, audience and publishing goals.',
- sections: [{"heading": "Explore Find a Literary Agent", "paragraphs": ["Find a Literary Agent calls for more than a one-size-fits-all approach. The right decisions depend on the purpose of your project, the people you want to reach and the experience you want them to have.", "At Wordsmith Squad, we begin by understanding your brief, source material and expectations. We then shape a practical plan that keeps the work aligned with your voice while giving the final result clarity, structure and consistency.", "Whether you are starting with an early idea or refining an established project, our find a literary agent service is designed to make the next steps easier to understand and manage."]}, {"heading": "Why Find a Literary Agent Matters", "paragraphs": ["A well-planned find a literary agent project gives your ideas a stronger foundation. It helps establish a clear direction, reduces avoidable revisions and makes the final work more useful to its intended audience.", "We pay attention to the details that influence quality: purpose, tone, structure, accuracy, consistency and presentation. Each decision is considered in the context of your specific brief."], "bullets": ["A clear direction based on your goals and audience.", "A structure that makes information easy to follow.", "Consistent tone, terminology and presentation.", "Thoughtful review at important project stages.", "A final result prepared around the agreed requirements."]}, {"heading": "What Our Find a Literary Agent Service Can Include", "paragraphs": ["The scope is tailored to the type of material you are developing. We discuss the deliverables with you before work begins so the project has a shared and realistic direction."], "bullets": ["Initial discussion and project assessment.", "Planning and development of the core material.", "Refinement for clarity, flow and consistency.", "Review against your brief and intended audience.", "Final preparation and agreed revisions."]}, {"heading": "A Collaborative Process", "subsections": [{"heading": "Understand the Brief", "paragraphs": ["We learn about your objectives, audience, preferred style and any references or existing material relevant to your find a literary agent project."]}, {"heading": "Create a Practical Plan", "paragraphs": ["We outline the scope, milestones and expected deliverables so you know what will happen and when."]}, {"heading": "Develop and Refine", "paragraphs": ["The work is developed in stages, with attention to feedback, consistency and the requirements agreed at the start."]}, {"heading": "Review and Deliver", "paragraphs": ["We complete a final review and prepare the agreed files or materials for handover."]}]}, {"heading": "Who Can Benefit from Find a Literary Agent?", "paragraphs": ["This service can support first-time creators, experienced professionals, independent authors, businesses and organizations. The approach changes according to the subject, complexity and intended use of the work."]}, {"heading": "Ready to Discuss Your Project?", "paragraphs": ["Every project begins with a conversation. Tell us what you are creating, what stage you have reached and what outcome you have in mind. We can then discuss a suitable way forward for your find a literary agent needs."]}],
- faqs: [{"question": "What is included in Find a Literary Agent?", "answer": "The scope depends on your brief and project goals. We discuss the required deliverables, timeline and level of support before work begins."}, {"question": "Can the service be tailored to my project?", "answer": "Yes. We shape the process around your subject, audience, preferred style and the materials you provide."}, {"question": "Can I provide my own notes or draft?", "answer": "Absolutely. Existing drafts, outlines, research, notes and reference materials can help guide the work."}, {"question": "How long does the process take?", "answer": "Timing depends on the length, complexity and scope of the project. We agree on a realistic schedule after reviewing your requirements."}, {"question": "Will my project details be kept private?", "answer": "We treat client materials and project information with care and discuss confidentiality expectations as part of the project."}]
+  title: "Find a Literary Agent",
+
+  subtitle:
+    "Get Your Book Ready for Agents and Publishers",
+
+  number: "19",
+
+  image: EDITORIAL.desk,
+
+  imageAlt:
+    "Editorial workspace for Find a Literary Agent",
+
+  accent: "gold",
+
+  description:
+    "If you want a traditional publisher, you usually need three things: a strong pitch, a professional submission package and the right literary agent. These materials are short, but they carry a lot of weight. An agent may decide in seconds whether to read further. Wordsmith Squad helps you write persuasive submission materials and approach the process with realistic expectations. You keep full ownership of your work.",
+
+  sections: [
+    {
+      heading:
+        "Query Letters, Book Proposals & Literary Agent Services",
+
+      paragraphs: [
+        "If you want a traditional publisher, you usually need three things: a strong pitch, a professional submission package and the right literary agent. These materials are short, but they carry a lot of weight. An agent may decide in seconds whether to read further.",
+
+        "Wordsmith Squad helps you write persuasive submission materials and approach the process with realistic expectations. You keep full ownership of your work.",
+      ],
+    },
+
+    {
+      heading: "What Does a Literary Agent Do?",
+
+      paragraphs: [
+        "A literary agent represents authors to publishers. They pitch your book to the right editors, negotiate contracts and advances, and guide your career.",
+
+        "Agents are paid a percentage of what you earn, and reputable agents don’t charge reading fees. Most large publishers only consider agented submissions, which is why finding the right agent matters.",
+      ],
+    },
+
+    {
+      heading: "How to Find a Literary Agent",
+
+      paragraphs: [
+        "Wondering how to find a literary agent? Follow these steps:",
+      ],
+
+      bullets: [
+        "1. Finish and polish your manuscript. Fiction should be complete. Nonfiction needs a proposal.",
+
+        "2. Research agents in your genre. Look for those who represent books like yours and are open to new clients.",
+
+        "3. Check legitimacy. Reputable agents don’t charge upfront fees.",
+
+        "4. Personalize each submission. Follow each agent’s guidelines exactly.",
+
+        "5. Track your queries and follow up appropriately.",
+
+        "6. Be patient. Rejections are normal, and responses can take weeks or months.",
+      ],
+    },
+
+    {
+      heading: "Find a Literary Agent",
+
+      paragraphs: [
+        "When you set out to find a literary agent, strong materials make the difference. Our team prepares your pitch package, helps you build a targeted submission list and reviews your materials before you send them.",
+      ],
+    },
+
+    {
+      heading: "Query Letter Writing",
+
+      paragraphs: [
+        "A query letter is a one-page pitch that introduces you and your book to an agent. It needs a strong hook, a clear summary, your genre and word count, and a short author bio.",
+
+        "Our writers craft query letters that stand out for the right reasons, with a confident voice and no clichés.",
+
+        "You receive: A polished query letter, plus a short synopsis if needed.",
+      ],
+    },
+
+    {
+      heading: "Book Proposal",
+
+      paragraphs: [
+        "For most nonfiction, you sell the book before you finish writing it, and a book proposal is how.",
+
+        "It is a detailed business document that tells agents and publishers why your book will succeed.",
+
+        "A strong proposal usually includes:",
+      ],
+
+      bullets: [
+        "An overview of your book and its hook",
+
+        "Your target audience and market",
+
+        "Competing and comparable titles",
+
+        "Your author platform and promotion plan",
+
+        "A chapter outline",
+
+        "Sample chapters",
+      ],
+    },
+
+    {
+      heading: "Book Proposal Writing Services",
+
+      paragraphs: [
+        "Writing a proposal is hard. You have to sell your book, your market and yourself, all at once.",
+
+        "Our book proposal writing services do the heavy lifting. We research your market, find comparison titles, write each section and polish the whole package so it is ready to send to agents.",
+
+        "Best for: Nonfiction authors, business book authors, memoirists and experts building a platform.",
+      ],
+    },
+
+    {
+      heading: "Our Process",
+
+      subsections: [
+        {
+          heading: "01. Free Consultation",
+
+          paragraphs: [
+            "Tell us about your book, goals and background.",
+          ],
+        },
+
+        {
+          heading: "02. Discovery",
+
+          paragraphs: [
+            "We gather details about your idea, audience and platform.",
+          ],
+        },
+
+        {
+          heading: "03. Drafting",
+
+          paragraphs: [
+            "We write your query letter or proposal.",
+          ],
+        },
+
+        {
+          heading: "04. Review and Revisions",
+
+          paragraphs: [
+            "You give feedback and we refine.",
+          ],
+        },
+
+        {
+          heading: "05. Final Package",
+
+          paragraphs: [
+            "You receive submission-ready materials.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Why Choose Wordsmith Squad",
+
+      bullets: [
+        "Writers who understand pitching and what agents want to see",
+
+        "Honest expectations, with no promises of guaranteed deals",
+
+        "Strict confidentiality through a signed NDA",
+
+        "Full ownership of your materials",
+
+        "A complete team for ghostwriting, editing and publishing",
+      ],
+    },
+
+    {
+      heading: "Ready to Pitch Your Book?",
+
+      paragraphs: [
+        "Get a Free Quote",
+      ],
+    },
+  ],
+
+  faqs: [
+    {
+      question:
+        "Can you guarantee I’ll get an agent?",
+
+      answer:
+        "No. Nobody can. We make your materials as strong as possible and help you submit strategically.",
+    },
+
+    {
+      question:
+        "Do I need a book proposal for fiction?",
+
+      answer:
+        "Generally no. Fiction authors usually submit a query letter, a synopsis and sample pages or the full manuscript. Nonfiction typically needs a proposal.",
+    },
+
+    {
+      question:
+        "Do you charge a percentage of my book sales?",
+
+      answer:
+        "No. You pay for the writing service only.",
+    },
+
+    {
+      question: "How long does it take?",
+
+      answer:
+        "Query letters can take days. Proposals take longer.",
+    },
+
+    {
+      question: "How much does it cost?",
+
+      answer:
+        "Pricing depends on the type and length of material.",
+    },
+  ],
 };
 
 export default function FindALiteraryAgent() {
- return <GhostwritingSubpageLayout data={data} />;
+  return (
+    <GhostwritingSubpageLayout data={data} />
+  );
 }

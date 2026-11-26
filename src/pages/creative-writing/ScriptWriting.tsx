@@ -1,44 +1,87 @@
 
-import {
-  type DetailContent,
-} from "@/components/ServiceDetailLayout";
+import CreativeWritingSubpageLayout from "@/pages/creative-writing/CreativeWritingSubpageLayout";
+import type { DetailContent } from "@/components/ServiceDetailLayout";
 
-import CreativeWritingSubpageLayout from "./CreativeWritingSubpageLayout";
+/**
+ * WORDSMITH SQUAD
+ * Script Writing Services
+ *
+ * Approved SEO PDF: Pages 26–28
+ *
+ * Original Creative Writing layout retained.
+ */
 
-/** This file belongs ONLY to Script Writing. Edit content here without affecting other pages. */
 const page: DetailContent = {
-  "title": "Script Writing",
-  "section": "Creative Writing",
-  "sectionUrl": "/creative-writing",
-  "intro": "Script Writing designed around your voice, your goals, and the readers you want to reach.",
-  "description": "Whether you are beginning with an idea or refining work already underway, our approach to script writing focuses on clarity, thoughtful collaboration, and a polished final result.",
-  "highlights": [
-    "A clear creative direction",
-    "Careful attention to detail",
-    "Support tailored to your project"
+  title: "Script Writing",
+
+  section: "Creative Writing",
+
+  sectionUrl: "/creative-writing",
+
+  intro:
+    "Some stories are meant to be heard, watched or performed. At Wordsmith Squad, our writers create scripts, songs, speeches and comics that sound right out loud and hold attention. You keep the rights and the credit.",
+
+  description:
+    "Our script writing services cover scripts for video, ads, explainers, training, brand films and short-form content. We write clear, structured scripts with the right tone, timing and call to action.",
+
+  highlights: [
+    "Video, advertising, explainer and training scripts",
+    "Brand films and short-form content",
+    "Clear structure, appropriate tone, timing and calls to action",
   ],
-  "process": [
-    "Share your vision",
-    "Shape a thoughtful plan",
-    "Refine and move forward"
+
+  process: [
+    "Free consultation: Share your project, format and audience.",
+    "Writer match and outline: We assign an experienced writer and prepare an outline or treatment for your approval.",
+    "Draft, feedback and final delivery: Review the draft, request changes and receive a polished script ready to use.",
   ],
-  "related": [
+
+  audience: [
+    "Businesses and brands creating advertising campaigns",
+    "Video producers and creative teams",
+    "Companies developing training and explainer videos",
+    "Content creators producing short-form videos",
+    "Organizations creating brand films",
+  ],
+
+  related: [
     {
-      "label": "Story Writing",
-      "to": "/creative-writing/story-writing"
+      label: "Screenwriting",
+      to: "/creative-writing/screenwriting",
     },
     {
-      "label": "Novel Writing",
-      "to": "/creative-writing/novel-writing"
+      label: "Copywriting",
+      to: "/creative-writing/copywriting",
     },
+  ],
+
+  faqs: [
     {
-      "label": "Poetry Writing",
-      "to": "/creative-writing/poetry-writing"
-    }
-  ]
+      question: "Do you format screenplays to industry standards?",
+
+      answer: "Yes.",
+    },
+
+    {
+      question: "Can you write songs with music?",
+
+      answer: "Yes.",
+    },
+
+    {
+      question: "Who owns the finished script or song?",
+
+      answer: "You do. You receive full ownership.",
+    },
+
+    {
+      question: "What does it cost?",
+
+      answer: "It depends on length and format.",
+    },
+  ],
 };
 
-export default function PageCreativewritingscriptwriting() {
+export default function ScriptWriting() {
   return <CreativeWritingSubpageLayout page={page} />;
-  }
-
+}

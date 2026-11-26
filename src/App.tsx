@@ -14,7 +14,10 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui";
 
-// Main Pages
+// ==========================================
+// MAIN PAGES
+// ==========================================
+
 import Home from "@/pages/home/Home_main";
 import About from "@/pages/about/About_main";
 import Services from "@/pages/services/Services";
@@ -23,13 +26,19 @@ import Contact from "@/pages/contact/Contact_main";
 import Brand from "@/pages/brand/Brand";
 import Trailer from "@/pages/trailer/Trailer";
 
-// About Subpages (Preserved)
+// ==========================================
+// ABOUT SUBPAGES
+// ==========================================
+
 import PageAboutourstory from "@/pages/about/OurStory";
 import PageAboutourmission from "@/pages/about/OurMission";
 import PageAboutourteam from "@/pages/about/OurTeam";
 import PageAbouthowwework from "@/pages/about/HowWeWork";
 
-// Editing
+// ==========================================
+// EDITING
+// ==========================================
+
 import OverviewEditing from "@/pages/editing/Editing_main";
 import PageEditingmanuscriptediting from "@/pages/editing/ManuscriptEditing";
 import PageEditingdevelopmentalediting from "@/pages/editing/DevelopmentalEditing";
@@ -40,20 +49,26 @@ import PageEditingmanuscriptassessment from "@/pages/editing/ManuscriptAssessmen
 import PageEditingbookformatting from "@/pages/editing/BookFormatting";
 import PageEditingbookcritiqueservices from "@/pages/editing/BookCritiqueServices";
 
-// Publishing
+// ==========================================
+// PUBLISHING
+// ==========================================
+
 import OverviewPublishing from "@/pages/publishing/Publishing_main";
 import EbookPublishing from "@/pages/publishing/EbookPublishing";
 import AudiobookPublishing from "@/pages/publishing/AudiobookPublishing";
 import SelfPublishingConsultants from "@/pages/publishing/SelfPublishing";
 
-// Ghostwriting
+// ==========================================
+// GHOSTWRITING
+// ==========================================
+
 import OverviewGhostwriting from "@/pages/ghostwriting/Ghostwriting_main";
 import PageGhostwritingmedicalghostwriters from "@/pages/ghostwriting/MedicalGhostwriters";
 import PageGhostwritingscreenplayscriptwriting from "@/pages/ghostwriting/ScreenplayScriptWriting";
 import PageGhostwritingchildrensbookwriting from "@/pages/ghostwriting/ChildrensBookWriting";
 import PageGhostwritingspeechscriptwriting from "@/pages/ghostwriting/SpeechScriptWriting";
 import PageGhostwritingcomicbookwriting from "@/pages/ghostwriting/ComicBookWriting";
-import PageGhostwritingsongwriting from "@/pages/ghostwriting/SongWriting";
+import PageGhostwritingnovelwriting from "@/pages/ghostwriting/NovelWriting";
 import PageGhostwritingreallifestorywriting from "@/pages/ghostwriting/RealLifeStoryWriting";
 import PageGhostwritingbookpublishingservices from "@/pages/ghostwriting/BookPublishingServices";
 import PageGhostwritingcorporatewritingservices from "@/pages/ghostwriting/CorporateWritingServices";
@@ -68,7 +83,10 @@ import PageGhostwritinglinkedinghostwriting from "@/pages/ghostwriting/LinkedinG
 import PageGhostwritingscientificghostwriting from "@/pages/ghostwriting/ScientificGhostwriting";
 import PageGhostwritingfindaliteraryagent from "@/pages/ghostwriting/FindALiteraryAgent";
 
-// Genre
+// ==========================================
+// GENRE
+// ==========================================
+
 import OverviewGenre from "@/pages/genre/Genre_main";
 import PageGenrefiction from "@/pages/genre/Fiction";
 import PageGenrenonfiction from "@/pages/genre/Nonfiction";
@@ -80,6 +98,7 @@ import PageGenrebusinessandselfhelp from "@/pages/genre/BusinessAndSelfHelp";
 import PageGenrechildrensbooks from "@/pages/genre/ChildrensBooks";
 
 // Additional Genre SEO Pages
+
 import AutoGenreFictionWriters from "@/pages/genre/FictionWriters";
 import AutoGenreNonFictionWriters from "@/pages/genre/NonFictionWriters";
 import AutoGenreFantasyWriters from "@/pages/genre/FantasyWriters";
@@ -105,45 +124,45 @@ import AutoGenreTragedyWriters from "@/pages/genre/TragedyWriters";
 import AutoGenreHumorWriters from "@/pages/genre/HumorWriters";
 import AutoGenreRhymeWriters from "@/pages/genre/RhymeWriters";
 
-// Creative Writing
+// ==========================================
+// CREATIVE WRITING — ONLY SIX SUBPAGES
+// ==========================================
+
 import OverviewCreativewriting from "@/pages/creative-writing/Creative_Writing_main";
-import PageCreativewritingstorywriting from "@/pages/creative-writing/StoryWriting";
-import PageCreativewritingnovelwriting from "@/pages/creative-writing/NovelWriting";
-import PageCreativewritingpoetrywriting from "@/pages/creative-writing/PoetryWriting";
-import PageCreativewritingscreenwriting from "@/pages/creative-writing/Screenwriting";
+
+import PageCreativewritingcopywriting from "@/pages/creative-writing/Copywriting";
+import PageCreativewritingthesiswriting from "@/pages/creative-writing/ThesisWriting";
+import PageCreativewritingdissertationwriting from "@/pages/creative-writing/DissertationWriting";
+import PageCreativewritingresearchwriting from "@/pages/creative-writing/ResearchWriting";
 import PageCreativewritingscriptwriting from "@/pages/creative-writing/ScriptWriting";
-import PageCreativewritingbookoutlining from "@/pages/creative-writing/BookOutlining";
+import PageCreativewritingarticlewriting from "@/pages/creative-writing/ArticleAndBlogWriting";
 
-// Additional Creative Writing Pages
-import AutoCreativewritingCreativeWriting from "@/pages/creative-writing/CreativeWriting";
-import AutoCreativewritingSeoContentWriting from "@/pages/creative-writing/SeoContentWriting";
-import AutoCreativewritingArticleAndBlogWriting from "@/pages/creative-writing/ArticleAndBlogWriting";
-import AutoCreativewritingPressReleaseWriting from "@/pages/creative-writing/PressReleaseWriting";
-import AutoCreativewritingSocialMediaContentWriting from "@/pages/creative-writing/SocialMediaContentWriting";
-import AutoCreativewritingBusinessProposalsWriting from "@/pages/creative-writing/BusinessProposalsWriting";
-import AutoCreativewritingNewsletterWriting from "@/pages/creative-writing/NewsletterWriting";
-import AutoCreativewritingEmailGhostwriting from "@/pages/creative-writing/EmailGhostwriting";
-import AutoCreativewritingLeadMagnetWriting from "@/pages/creative-writing/LeadMagnetWriting";
-import AutoCreativewritingVoiceoverScriptWriting from "@/pages/creative-writing/VoiceoverScriptWriting";
-import AutoCreativewritingWebsiteCopywriting from "@/pages/creative-writing/WebsiteCopywriting";
-import AutoCreativewritingLiteratureReviewWriting from "@/pages/creative-writing/LiteratureReviewWriting";
-import AutoCreativewritingAnnotatedBibliographyWriting from "@/pages/creative-writing/AnnotatedBibliographyWriting";
-import AutoCreativewritingBookCritiqueServices from "@/pages/creative-writing/BookCritiqueServices";
+// ==========================================
+// BOOK COVER
+// ==========================================
 
-// Book Cover
 import OverviewBookcover from "@/pages/book-cover/Book_Cover_main";
 import PageBookcoverbookcoverdesign from "@/pages/book-cover/BookCoverDesign";
 import PageBookcoverlayoutdesignandtypesetting from "@/pages/book-cover/LayoutDesignAndTypesetting";
 import PageBookcoverbookillustration from "@/pages/book-cover/BookIllustration";
 import PageBookcoverebookcoverdesign from "@/pages/book-cover/EbookCoverDesign";
 
-// Marketing Main Page Only
+// ==========================================
+// MARKETING
+// ==========================================
+
 import OverviewMarketing from "@/pages/marketing/Marketing_main";
 
-// Pricing Plans Main Page Only
+// ==========================================
+// PRICING
+// ==========================================
+
 import OverviewPricingplans from "@/pages/pricing-plans/Pricing_Plans_main";
 
-// Legacy URL redirect
+// ==========================================
+// LEGACY URL REDIRECT
+// ==========================================
+
 function LegacyExploreRedirect() {
   const { category, slug } = useParams();
 
@@ -155,7 +174,10 @@ function LegacyExploreRedirect() {
   );
 }
 
-// Scroll Manager
+// ==========================================
+// SCROLL MANAGER
+// ==========================================
+
 function ScrollManager() {
   const location = useLocation();
 
@@ -174,7 +196,10 @@ function ScrollManager() {
   return null;
 }
 
-// 404 Page
+// ==========================================
+// 404 PAGE
+// ==========================================
+
 function NotFound() {
   return (
     <section className="flex min-h-svh flex-col items-center justify-center bg-ink-950 px-6 pt-24 text-center">
@@ -201,7 +226,10 @@ function NotFound() {
   );
 }
 
-// Main Website Shell
+// ==========================================
+// MAIN WEBSITE SHELL
+// ==========================================
+
 function Shell() {
   const location = useLocation();
 
@@ -257,7 +285,10 @@ function Shell() {
       >
         <Routes>
 
-          {/* Main Pages */}
+          {/* ==================================
+              MAIN PAGES
+          ================================== */}
+
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
@@ -266,13 +297,19 @@ function Shell() {
           <Route path="/brand" element={<Brand />} />
           <Route path="/trailer" element={<Trailer />} />
 
-          {/* About Subpages - Preserved */}
+          {/* ==================================
+              ABOUT SUBPAGES
+          ================================== */}
+
           <Route path="/about/our-story" element={<PageAboutourstory />} />
           <Route path="/about/our-mission" element={<PageAboutourmission />} />
           <Route path="/about/our-team" element={<PageAboutourteam />} />
           <Route path="/about/how-we-work" element={<PageAbouthowwework />} />
 
-          {/* Editing */}
+          {/* ==================================
+              EDITING
+          ================================== */}
+
           <Route path="/editing" element={<OverviewEditing />} />
           <Route path="/editing/manuscript-editing" element={<PageEditingmanuscriptediting />} />
           <Route path="/editing/developmental-editing" element={<PageEditingdevelopmentalediting />} />
@@ -283,20 +320,26 @@ function Shell() {
           <Route path="/editing/book-formatting" element={<PageEditingbookformatting />} />
           <Route path="/editing/book-critique-services" element={<PageEditingbookcritiqueservices />} />
 
-          {/* Publishing */}
+          {/* ==================================
+              PUBLISHING
+          ================================== */}
+
           <Route path="/publishing" element={<OverviewPublishing />} />
           <Route path="/publishing/ebook-publishing" element={<EbookPublishing />} />
           <Route path="/publishing/audiobook-publishing" element={<AudiobookPublishing />} />
           <Route path="/publishing/self-publishing-consultants" element={<SelfPublishingConsultants />} />
 
-          {/* Ghostwriting */}
+          {/* ==================================
+              GHOSTWRITING
+          ================================== */}
+
           <Route path="/ghostwriting" element={<OverviewGhostwriting />} />
           <Route path="/ghostwriting/medical-ghostwriters" element={<PageGhostwritingmedicalghostwriters />} />
           <Route path="/ghostwriting/screenplay-script-writing" element={<PageGhostwritingscreenplayscriptwriting />} />
           <Route path="/ghostwriting/childrens-book-writing" element={<PageGhostwritingchildrensbookwriting />} />
           <Route path="/ghostwriting/speech-script-writing" element={<PageGhostwritingspeechscriptwriting />} />
           <Route path="/ghostwriting/comic-book-writing" element={<PageGhostwritingcomicbookwriting />} />
-          <Route path="/ghostwriting/song-writing" element={<PageGhostwritingsongwriting />} />
+          <Route path="/ghostwriting/novel-writing" element={<PageGhostwritingnovelwriting />} />
           <Route path="/ghostwriting/real-life-story-writing" element={<PageGhostwritingreallifestorywriting />} />
           <Route path="/ghostwriting/book-publishing-services" element={<PageGhostwritingbookpublishingservices />} />
           <Route path="/ghostwriting/corporate-writing-services" element={<PageGhostwritingcorporatewritingservices />} />
@@ -311,7 +354,10 @@ function Shell() {
           <Route path="/ghostwriting/scientific-ghostwriting" element={<PageGhostwritingscientificghostwriting />} />
           <Route path="/ghostwriting/find-a-literary-agent" element={<PageGhostwritingfindaliteraryagent />} />
 
-          {/* Genre */}
+          {/* ==================================
+              GENRE
+          ================================== */}
+
           <Route path="/genre" element={<OverviewGenre />} />
           <Route path="/genre/fiction" element={<PageGenrefiction />} />
           <Route path="/genre/nonfiction" element={<PageGenrenonfiction />} />
@@ -323,6 +369,7 @@ function Shell() {
           <Route path="/genre/childrens-books" element={<PageGenrechildrensbooks />} />
 
           {/* Additional Genre SEO Pages */}
+
           <Route path="/genre/fiction-writers" element={<AutoGenreFictionWriters />} />
           <Route path="/genre/non-fiction-writers" element={<AutoGenreNonFictionWriters />} />
           <Route path="/genre/fantasy-writers" element={<AutoGenreFantasyWriters />} />
@@ -348,55 +395,65 @@ function Shell() {
           <Route path="/genre/humor-writers" element={<AutoGenreHumorWriters />} />
           <Route path="/genre/rhyme-writers" element={<AutoGenreRhymeWriters />} />
 
-          {/* Creative Writing */}
+          {/* ==================================
+              CREATIVE WRITING
+              ONLY SIX SUBPAGES
+          ================================== */}
+
           <Route path="/creative-writing" element={<OverviewCreativewriting />} />
-          <Route path="/creative-writing/story-writing" element={<PageCreativewritingstorywriting />} />
-          <Route path="/creative-writing/novel-writing" element={<PageCreativewritingnovelwriting />} />
-          <Route path="/creative-writing/poetry-writing" element={<PageCreativewritingpoetrywriting />} />
-          <Route path="/creative-writing/screenwriting" element={<PageCreativewritingscreenwriting />} />
+
+          <Route path="/creative-writing/copywriting" element={<PageCreativewritingcopywriting />} />
+
+          <Route path="/creative-writing/thesis-writing" element={<PageCreativewritingthesiswriting />} />
+
+          <Route path="/creative-writing/dissertation-writing" element={<PageCreativewritingdissertationwriting />} />
+
+          <Route path="/creative-writing/research-writing" element={<PageCreativewritingresearchwriting />} />
+
           <Route path="/creative-writing/script-writing" element={<PageCreativewritingscriptwriting />} />
-          <Route path="/creative-writing/book-outlining" element={<PageCreativewritingbookoutlining />} />
 
-          {/* Additional Creative Writing Pages */}
-          <Route path="/creative-writing/creative-writing" element={<AutoCreativewritingCreativeWriting />} />
-          <Route path="/creative-writing/seo-content-writing" element={<AutoCreativewritingSeoContentWriting />} />
-          <Route path="/creative-writing/article-and-blog-writing" element={<AutoCreativewritingArticleAndBlogWriting />} />
-          <Route path="/creative-writing/press-release-writing" element={<AutoCreativewritingPressReleaseWriting />} />
-          <Route path="/creative-writing/social-media-content-writing" element={<AutoCreativewritingSocialMediaContentWriting />} />
-          <Route path="/creative-writing/business-proposals-writing" element={<AutoCreativewritingBusinessProposalsWriting />} />
-          <Route path="/creative-writing/newsletter-writing" element={<AutoCreativewritingNewsletterWriting />} />
-          <Route path="/creative-writing/email-ghostwriting" element={<AutoCreativewritingEmailGhostwriting />} />
-          <Route path="/creative-writing/lead-magnet-writing" element={<AutoCreativewritingLeadMagnetWriting />} />
-          <Route path="/creative-writing/voiceover-script-writing" element={<AutoCreativewritingVoiceoverScriptWriting />} />
-          <Route path="/creative-writing/website-copywriting" element={<AutoCreativewritingWebsiteCopywriting />} />
-          <Route path="/creative-writing/literature-review-writing" element={<AutoCreativewritingLiteratureReviewWriting />} />
-          <Route path="/creative-writing/annotated-bibliography-writing" element={<AutoCreativewritingAnnotatedBibliographyWriting />} />
-          <Route path="/creative-writing/book-critique-services" element={<AutoCreativewritingBookCritiqueServices />} />
+          <Route path="/creative-writing/article-writing" element={<PageCreativewritingarticlewriting />} />
 
-          {/* Book Cover */}
+          {/* ==================================
+              BOOK COVER
+          ================================== */}
+
           <Route path="/book-cover" element={<OverviewBookcover />} />
           <Route path="/book-cover/book-cover-design" element={<PageBookcoverbookcoverdesign />} />
           <Route path="/book-cover/layout-design-and-typesetting" element={<PageBookcoverlayoutdesignandtypesetting />} />
           <Route path="/book-cover/book-illustration" element={<PageBookcoverbookillustration />} />
           <Route path="/book-cover/ebook-cover-design" element={<PageBookcoverebookcoverdesign />} />
 
-          {/* Marketing - Main Page Only */}
+          {/* ==================================
+              MARKETING
+          ================================== */}
+
           <Route path="/marketing" element={<OverviewMarketing />} />
 
-          {/* Pricing Plans - Main Page Only */}
+          {/* ==================================
+              PRICING
+          ================================== */}
+
           <Route path="/pricing-plans" element={<OverviewPricingplans />} />
 
-          {/* Legacy URL Redirects */}
+          {/* ==================================
+              LEGACY URL REDIRECTS
+          ================================== */}
+
           <Route
             path="/explore/:category/:slug"
             element={<LegacyExploreRedirect />}
           />
+
           <Route
             path="/explore/:category"
             element={<LegacyExploreRedirect />}
           />
 
-          {/* 404 - Keep Last */}
+          {/* ==================================
+              404 — KEEP LAST
+          ================================== */}
+
           <Route path="*" element={<NotFound />} />
 
         </Routes>
@@ -409,7 +466,10 @@ function Shell() {
   );
 }
 
-// Main App
+// ==========================================
+// MAIN APP
+// ==========================================
+
 export default function App() {
   return (
     <HashRouter>

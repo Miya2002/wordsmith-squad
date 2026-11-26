@@ -31,13 +31,70 @@ export default function CreativeWritingSubpageLayout({
   page,
 }: Props) {
   const chapter = creativeNumbers[page.title] ?? "01";
+
   const quote =
     creativeDescriptions[page.title] ??
     "Every great piece of writing begins with an idea.";
 
-  return (
-    <div className="cw-luxury">
+  // Intercept internal section links from ServiceDetailLayout.
+  // This prevents HashRouter from treating them as page navigation.
+  const handleInternalNavigation = (
+    event: React.MouseEvent<HTMLDivElement>
+  ) => {
+    const target = event.target;
 
+    if (!(target instanceof Element)) return;
+
+    const anchor = target.closest<HTMLAnchorElement>(
+      'a[href^="#"]'
+    );
+
+    if (!anchor) return;
+
+    const href = anchor.getAttribute("href");
+
+    if (!href || href === "#") return;
+
+    let sectionId: string;
+
+    try {
+      sectionId = decodeURIComponent(href.slice(1));
+    } catch {
+      return;
+    }
+
+    const section = document.getElementById(sectionId);
+
+    if (!section) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    const headerOffset = 100;
+
+    const top =
+      section.getBoundingClientRect().top +
+      window.scrollY -
+      headerOffset;
+
+    window.scrollTo({
+      top: Math.max(0, top),
+      behavior: window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches
+        ? "auto"
+        : "smooth",
+    });
+
+    // Close mobile chapter menu after selection.
+    anchor.closest("details")?.removeAttribute("open");
+  };
+
+  return (
+    <div
+      className="cw-luxury"
+      onClickCapture={handleInternalNavigation}
+    >
       <style>{`
         .cw-luxury {
           --lux-gold: #c6a36e;
@@ -63,11 +120,10 @@ export default function CreativeWritingSubpageLayout({
           padding: 112px 0 25px;
         }
 
-        /* BREADCRUMB */
-
         .lux-breadcrumb {
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           gap: 12px;
           margin-bottom: 75px;
           color: #777064;
@@ -87,8 +143,6 @@ export default function CreativeWritingSubpageLayout({
         .lux-breadcrumb-current {
           color: var(--lux-gold);
         }
-
-        /* MAIN CONTENT */
 
         .lux-layout {
           display: grid;
@@ -152,8 +206,6 @@ export default function CreativeWritingSubpageLayout({
           line-height: 1.9;
         }
 
-        /* BUTTONS */
-
         .lux-actions {
           display: flex;
           align-items: center;
@@ -185,15 +237,21 @@ export default function CreativeWritingSubpageLayout({
         }
 
         .lux-link {
+          border: 0;
+          padding: 0;
+          background: transparent;
           color: var(--lux-gold);
           font-size: 9px;
           font-weight: 700;
           letter-spacing: .13em;
-          text-decoration: none;
           text-transform: uppercase;
+          cursor: pointer;
+          transition: color .25s;
         }
 
-        /* RIGHT EDITORIAL SECTION */
+        .lux-link:hover {
+          color: white;
+        }
 
         .lux-right {
           padding: 10px 0 10px 38px;
@@ -282,8 +340,6 @@ export default function CreativeWritingSubpageLayout({
           text-transform: uppercase;
         }
 
-        /* BOTTOM SIGNATURE */
-
         .lux-footer {
           display: flex;
           align-items: center;
@@ -298,13 +354,15 @@ export default function CreativeWritingSubpageLayout({
           text-transform: uppercase;
         }
 
-        /* KEEP THE ORIGINAL CONTENT BELOW */
-
+        /* Hide duplicate hero from shared content component. */
         .cw-luxury-content > main > section:first-of-type {
           display: none !important;
         }
 
-        /* TABLET */
+        /* Keep article sections clear of the sticky header. */
+        .cw-luxury-content section[id] {
+          scroll-margin-top: 105px;
+        }
 
         @media (max-width: 950px) {
           .lux-container {
@@ -324,8 +382,6 @@ export default function CreativeWritingSubpageLayout({
             margin-top: 45px;
           }
         }
-
-        /* MOBILE */
 
         @media (max-width: 600px) {
           .lux-container {
@@ -390,17 +446,19 @@ export default function CreativeWritingSubpageLayout({
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .cw-luxury * {
+          .cw-luxury *,
+          .cw-luxury *::before,
+          .cw-luxury *::after {
             transition: none !important;
+            animation: none !important;
           }
         }
       `}</style>
 
+      {/* CREATIVE WRITING HERO */}
+
       <section className="lux-hero">
         <div className="lux-container">
-
-          {/* BREADCRUMB */}
-
           <nav className="lux-breadcrumb" aria-label="Breadcrumb">
             <Link to="/">Home</Link>
             <span>/</span>
@@ -412,11 +470,7 @@ export default function CreativeWritingSubpageLayout({
           </nav>
 
           <div className="lux-layout">
-
-            {/* LEFT SIDE */}
-
             <div className="lux-left">
-
               <div className="lux-label">
                 WORDSMITH SQUAD / CREATIVE WRITING
               </div>
@@ -426,7 +480,8 @@ export default function CreativeWritingSubpageLayout({
               </div>
 
               <h1 className="lux-title">
-                {page.title}<span>.</span>
+                {page.title}
+                <span>.</span>
               </h1>
 
               <p className="lux-description">
@@ -434,23 +489,35 @@ export default function CreativeWritingSubpageLayout({
               </p>
 
               <div className="lux-actions">
-
                 <Link to="/contact" className="lux-cta">
                   Discuss Your Project
                   <span>↗</span>
                 </Link>
 
-                <a href="#overview" className="lux-link">
-                  Explore Our Services ↓
-                </a>
+                <button
+                  type="button"
+                  className="lux-link"
+                  onClick={() => {
+                    const target =
+                      document.getElementById("overview");
 
+                    if (!target) return;
+
+                    window.scrollTo({
+                      top:
+                        target.getBoundingClientRect().top +
+                        window.scrollY -
+                        100,
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Explore Our Services ↓
+                </button>
               </div>
             </div>
 
-            {/* RIGHT SIDE */}
-
             <aside className="lux-right">
-
               <div className="lux-card-top">
                 <div>
                   <div className="lux-brand">W.</div>
@@ -483,27 +550,21 @@ export default function CreativeWritingSubpageLayout({
                 <span>CREATIVITY</span>
                 <span>CRAFTSMANSHIP</span>
               </div>
-
             </aside>
-
           </div>
-
-          {/* FOOTER */}
 
           <div className="lux-footer">
             <span>WORDSMITH SQUAD</span>
             <span>PRECISION · PURPOSE · PASSION</span>
           </div>
-
         </div>
       </section>
 
-      {/* ORIGINAL SERVICE CONTENT */}
+      {/* ORIGINAL SHARED CONTENT AND SIDEBAR */}
 
       <div className="cw-luxury-content">
         <ServiceDetailLayout page={page} />
       </div>
-
     </div>
   );
 }

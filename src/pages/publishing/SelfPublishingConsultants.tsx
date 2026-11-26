@@ -1,19 +1,241 @@
-import EditingSubpageLayout, { type EditingPageData } from "@/pages/editing/EditingSubpageLayout";
+
+import EditingSubpageLayout, {
+  type EditingPageData,
+} from "@/pages/editing/EditingSubpageLayout";
+
 import { EDITORIAL } from "@/lib/data";
-// Separate content file for this subpage. Update this data without affecting its main page or other subpages.
+
+/**
+ * WORDSMITH SQUAD
+ * Self Publishing Consultants
+ *
+ * Approved SEO Content Source:
+ * Wordssmith Squad SEO for website.pdf
+ * Pages 53–56
+ *
+ * Existing layout, animations, styling,
+ * page number and image retained.
+ *
+ * Content is sourced from the approved PDF.
+ */
+
 const data: EditingPageData = {
- title: 'Self Publishing Consultants',
- subtitle: 'Professional Self Publishing Consultants Services',
- number: '03',
- image: EDITORIAL.desk,
- imageAlt: 'Editorial workspace for Self Publishing Consultants',
- accent: "gold",
- description: 'Self Publishing Consultants support shaped around your project, audience and publishing goals.',
- sections: [{"heading": "Explore Self Publishing Consultants", "paragraphs": ["Self Publishing Consultants calls for more than a one-size-fits-all approach. The right decisions depend on the purpose of your project, the people you want to reach and the experience you want them to have.", "At Wordsmith Squad, we begin by understanding your brief, source material and expectations. We then shape a practical plan that keeps the work aligned with your voice while giving the final result clarity, structure and consistency.", "Whether you are starting with an early idea or refining an established project, our self publishing consultants service is designed to make the next steps easier to understand and manage."]}, {"heading": "Why Self Publishing Consultants Matters", "paragraphs": ["A well-planned self publishing consultants project gives your ideas a stronger foundation. It helps establish a clear direction, reduces avoidable revisions and makes the final work more useful to its intended audience.", "We pay attention to the details that influence quality: purpose, tone, structure, accuracy, consistency and presentation. Each decision is considered in the context of your specific brief."], "bullets": ["A clear direction based on your goals and audience.", "A structure that makes information easy to follow.", "Consistent tone, terminology and presentation.", "Thoughtful review at important project stages.", "A final result prepared around the agreed requirements."]}, {"heading": "What Our Self Publishing Consultants Service Can Include", "paragraphs": ["The scope is tailored to the type of material you are developing. We discuss the deliverables with you before work begins so the project has a shared and realistic direction."], "bullets": ["Initial discussion and project assessment.", "Planning and development of the core material.", "Refinement for clarity, flow and consistency.", "Review against your brief and intended audience.", "Final preparation and agreed revisions."]}, {"heading": "A Collaborative Process", "subsections": [{"heading": "Understand the Brief", "paragraphs": ["We learn about your objectives, audience, preferred style and any references or existing material relevant to your self publishing consultants project."]}, {"heading": "Create a Practical Plan", "paragraphs": ["We outline the scope, milestones and expected deliverables so you know what will happen and when."]}, {"heading": "Develop and Refine", "paragraphs": ["The work is developed in stages, with attention to feedback, consistency and the requirements agreed at the start."]}, {"heading": "Review and Deliver", "paragraphs": ["We complete a final review and prepare the agreed files or materials for handover."]}]}, {"heading": "Who Can Benefit from Self Publishing Consultants?", "paragraphs": ["This service can support first-time creators, experienced professionals, independent authors, businesses and organizations. The approach changes according to the subject, complexity and intended use of the work."]}, {"heading": "Ready to Discuss Your Project?", "paragraphs": ["Every project begins with a conversation. Tell us what you are creating, what stage you have reached and what outcome you have in mind. We can then discuss a suitable way forward for your self publishing consultants needs."]}],
- faqs: [{"question": "What is included in Self Publishing Consultants?", "answer": "The scope depends on your brief and project goals. We discuss the required deliverables, timeline and level of support before work begins."}, {"question": "Can the service be tailored to my project?", "answer": "Yes. We shape the process around your subject, audience, preferred style and the materials you provide."}, {"question": "Can I provide my own notes or draft?", "answer": "Absolutely. Existing drafts, outlines, research, notes and reference materials can help guide the work."}, {"question": "How long does the process take?", "answer": "Timing depends on the length, complexity and scope of the project. We agree on a realistic schedule after reviewing your requirements."}, {"question": "Will my project details be kept private?", "answer": "We treat client materials and project information with care and discuss confidentiality expectations as part of the project."}]
+  title: "Self Publishing Consultants",
+
+  subtitle:
+    "Self-Publishing Support for Authors in the USA",
+
+  number: "03",
+
+  image: EDITORIAL.desk,
+
+  imageAlt:
+    "Editorial workspace for Self Publishing Consultants",
+
+  accent: "gold",
+
+  description:
+    "Not sure where to start, or need an expert second opinion? Our self publishing consultants offer one-on-one guidance to help you pick a path, avoid common mistakes and plan your launch. Consulting is useful for first-time authors, authors who tried publishing before without results and professionals who want a clear plan fast.",
+
+  sections: [
+    {
+      heading: "Self Publishing Consultants",
+
+      paragraphs: [
+        "Not sure where to start, or need an expert second opinion? Our self publishing consultants offer one-on-one guidance to help you pick a path, avoid common mistakes and plan your launch.",
+
+        "Consulting is useful for first-time authors, authors who tried publishing before without results and professionals who want a clear plan fast.",
+      ],
+    },
+
+    {
+      heading: "Self-Publishing Support for Authors in the USA",
+
+      paragraphs: [
+        "Self-publishing gives you speed, control and the freedom to keep your rights. It also means you are in charge of every decision: editing, design, formatting, uploading, pricing and marketing.",
+
+        "At Wordsmith Squad, we guide you through each step so your book looks and reads like it came from a professional publisher. You own your book, your files and your rights.",
+      ],
+    },
+
+    {
+      heading: "Self Publishing",
+
+      paragraphs: [
+        "Self publishing means you publish your book yourself instead of selling the rights to a traditional publisher.",
+
+        "You choose the cover, price and release date, and you earn higher royalties per sale.",
+
+        "The trade-off is that you handle (or hire out) everything a publisher would normally do. We help you do it properly.",
+      ],
+    },
+
+    {
+      heading: "Self Publishing Services",
+
+      paragraphs: [
+        "Our self publishing services cover the full path from finished manuscript to live book.",
+
+        "You can choose the full package or only the steps you need.",
+      ],
+
+      bullets: [
+        "Editing and proofreading coordination",
+        "Interior formatting and typesetting",
+        "Cover design coordination",
+        "Platform setup and file uploads",
+        "Book descriptions, categories and keywords",
+        "Launch planning",
+      ],
+    },
+
+    {
+      heading: "How to Self Publish a Book",
+
+      paragraphs: [
+        "Wondering how to self publish a book? Here is the usual path:",
+      ],
+
+      subsections: [
+        {
+          heading: "01. Finish and Edit Your Manuscript",
+          paragraphs: [
+            "Professional editing and proofreading make the biggest difference in reviews.",
+          ],
+        },
+        {
+          heading: "02. Format the Interior",
+          paragraphs: [
+            "Print and e-book files each need correct formatting.",
+          ],
+        },
+        {
+          heading: "03. Design a Professional Cover",
+          paragraphs: [
+            "Your cover is your most important sales tool.",
+          ],
+        },
+        {
+          heading: "04. Get Your ISBN and Book Details Ready",
+          paragraphs: [
+            "Decide on your title, subtitle, description and categories.",
+          ],
+        },
+        {
+          heading: "05. Choose Your Platforms",
+          paragraphs: [
+            "Most authors start with Amazon and add other retailers.",
+          ],
+        },
+        {
+          heading: "06. Set Your Price and Upload",
+          paragraphs: [
+            "Review the proof copy carefully before approving.",
+          ],
+        },
+        {
+          heading: "07. Launch and Promote",
+          paragraphs: [
+            "Reviews, email lists and targeted marketing help new books gain traction.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Amazon KDP",
+
+      paragraphs: [
+        "Amazon KDP (Kindle Direct Publishing) is the most popular self-publishing platform in the US. It lets you publish e-books, paperbacks and hardcovers and reach Amazon’s customers worldwide.",
+
+        "KDP is free to use, but getting results depends on correct formatting, a strong cover, a persuasive description and smart category and keyword choices.",
+
+        "We prepare your book so your upload goes smoothly and your listing is built to sell.",
+      ],
+    },
+
+    {
+      heading: "Kindle Direct Publishing",
+
+      paragraphs: [
+        "Our Kindle direct publishing support covers account setup, file preparation, metadata, pricing and publishing.",
+
+        "We make sure your e-book displays well on Kindle devices and apps, and your print edition meets KDP’s requirements.",
+      ],
+    },
+
+    {
+      heading: "Print on Demand Books",
+
+      paragraphs: [
+        "Print on demand books are printed only when a customer orders, so you don’t need to pay for or store a large print run.",
+
+        "It is the main reason self-publishing is affordable today. Print on demand is offered through platforms such as KDP and IngramSpark, and it works for paperbacks and many hardcovers.",
+
+        "We help you choose a trim size, paper type and cover finish that fit your book and budget.",
+      ],
+    },
+
+    {
+      heading: "Self Publishing Companies: How to Choose Wisely",
+
+      paragraphs: [
+        "Many authors compare self publishing companies before deciding. Good ones are transparent about fees, let you keep your rights and files, and don’t pressure you.",
+
+        "Always read the contract and ask who owns the files. With Wordsmith Squad, you do.",
+      ],
+
+      bullets: [
+        "Promise guaranteed sales or bestseller status",
+        "Take your rights or ISBN",
+        "Hide fees or push expensive add-on packages",
+        "Rely on aggressive sales calls",
+      ],
+    },
+
+    {
+      heading: "Why Choose Wordsmith Squad",
+
+      bullets: [
+        "Honest advice, including when a service isn’t right for you",
+        "You keep all rights and files",
+        "One team for writing, editing, design, formatting and publishing",
+        "Transparent pricing with no hidden fees",
+        "Strict confidentiality through a signed NDA",
+      ],
+    },
+
+    {
+      heading: "Ready to Self-Publish?",
+
+      paragraphs: [
+        "Book Your Free Consultation",
+      ],
+    },
+  ],
+
+  faqs: [
+    {
+      question: "How much does it cost to self-publish a book?",
+      answer: "It depends on the services you need.",
+    },
+    {
+      question: "Do I need an ISBN?",
+      answer: "Usually, yes, for wide distribution.",
+    },
+    {
+      question: "How long does it take?",
+      answer:
+        "Once your manuscript is edited, publishing can take a few weeks.",
+    },
+    {
+      question: "Will you guarantee sales?",
+      answer:
+        "No. Nobody honestly can. We build a professional book and a solid launch plan.",
+    },
+  ],
 };
 
 export default function SelfPublishingConsultants() {
   return <EditingSubpageLayout data={data} />;
- }
-
+}

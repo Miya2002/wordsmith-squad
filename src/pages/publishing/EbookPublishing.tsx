@@ -5,156 +5,222 @@ import PublishingDetailLayout, {
 
 import { EDITORIAL } from "@/lib/data";
 
+/**
+ * WORDSMITH SQUAD
+ * eBook Publishing
+ *
+ * Approved SEO Content Source:
+ * Wordssmith Squad SEO for website.pdf
+ * Pages 57–59
+ *
+ * Existing PublishingDetailLayout,
+ * styling, animations and hero image retained.
+ *
+ * Page content is sourced from the SEO PDF.
+ */
+
 const page: PublishingPageContent = {
   title: "eBook Publishing",
 
-  subtitle: "Professional eBook Publishing Services",
+  subtitle:
+    "Publish Your Book in Digital and Audio Formats",
 
   intro:
-    "eBook Publishing support shaped around your project, audience and publishing goals.",
+    "Readers today buy books on phones, tablets and e-readers, and many prefer to listen. Offering both formats widens your audience and creates more ways for readers to find you. At Wordsmith Squad, we help you create and publish professional e-books and audiobooks, and you keep ownership of your work.",
 
   heroImage: EDITORIAL.desk,
 
-  heroEyebrow: "Professional Publishing Services",
+  heroEyebrow:
+    "eBook & Audiobook Publishing Services",
 
   sections: [
     {
-      id: "ebook-overview",
-      title: "Explore eBook Publishing",
+      id: "ebook-publishing",
+
+      title: "eBook Publishing",
+
       blocks: [
         {
           type: "paragraph",
-          text: "eBook Publishing calls for more than a one-size-fits-all approach. The right decisions depend on the purpose of your project, the people you want to reach and the experience you want them to have.",
+
+          text:
+            "Ebook publishing is one of the fastest and most affordable ways to get a book to market. An e-book needs clean formatting, a working table of contents, a polished cover and accurate metadata.",
         },
+
         {
           type: "paragraph",
-          text: "At Wordsmith Squad, we begin by understanding your brief, source material and expectations. We then shape a practical plan that keeps the work aligned with your voice while giving the final result clarity, structure and consistency.",
-        },
-        {
-          type: "paragraph",
-          text: "Whether you are starting with an early idea or refining an established project, our eBook publishing service is designed to make the next steps easier to understand and manage.",
+
+          text:
+            "We make sure your e-book works properly across Kindle, Apple Books, Kobo and other platforms.",
         },
       ],
     },
 
     {
-      id: "ebook-importance",
-      title: "Why eBook Publishing Matters",
+      id: "ebook-publishing-services",
+
+      title: "eBook Publishing Services",
+
       blocks: [
         {
           type: "paragraph",
-          text: "A well-planned eBook publishing project gives your ideas a stronger foundation. It helps establish a clear direction, reduces avoidable revisions and makes the final work more useful to its intended audience.",
+
+          text:
+            "Our ebook publishing services include:",
         },
-        {
-          type: "paragraph",
-          text: "We pay attention to the details that influence quality: purpose, tone, structure, accuracy, consistency and presentation. Each decision is considered in the context of your specific brief.",
-        },
+
         {
           type: "bullets",
+
           items: [
-            "A clear direction based on your goals and audience.",
-            "A structure that makes information easy to follow.",
-            "Consistent tone, terminology and presentation.",
-            "Thoughtful review at important project stages.",
-            "A final result prepared around the agreed requirements.",
+            "E-book formatting and file conversion",
+
+            "Cover design coordination",
+
+            "Description, category and keyword setup",
+
+            "Uploading to major retailers",
+
+            "Pricing guidance and launch planning",
           ],
         },
       ],
     },
 
     {
-      id: "ebook-services",
-      title: "What Our eBook Publishing Service Can Include",
+      id: "digital-and-audio-formats",
+
+      title:
+        "Publish Your Book in Digital and Audio Formats",
+
       blocks: [
         {
           type: "paragraph",
-          text: "The scope is tailored to the type of material you are developing. We discuss the deliverables with you before work begins so the project has a shared and realistic direction.",
+
+          text:
+            "Readers today buy books on phones, tablets and e-readers, and many prefer to listen. Offering both formats widens your audience and creates more ways for readers to find you.",
         },
+
+        {
+          type: "paragraph",
+
+          text:
+            "At Wordsmith Squad, we help you create and publish professional e-books and audiobooks, and you keep ownership of your work.",
+        },
+      ],
+    },
+
+    {
+      id: "audio-book",
+
+      title: "Audio Book",
+
+      blocks: [
+        {
+          type: "paragraph",
+
+          text:
+            "An audio book lets readers enjoy your story during commutes, workouts and chores, which opens your book to an audience that may never sit down with a print copy.",
+        },
+
+        {
+          type: "paragraph",
+
+          text:
+            "Audio is also a strong fit for business books, memoirs, self-help and fiction series, since listeners often follow an author from one title to the next.",
+        },
+      ],
+    },
+
+    {
+      id: "audiobook-publishing",
+
+      title: "Audiobook Publishing",
+
+      blocks: [
+        {
+          type: "paragraph",
+
+          text:
+            "Audiobook publishing involves more than recording. Files must be edited, mastered and checked to meet platform quality standards, and you need cover art in the right format and a clear distribution plan.",
+        },
+
+        {
+          type: "paragraph",
+
+          text:
+            "We help prepare your finished files for the platforms you choose.",
+        },
+      ],
+    },
+
+    {
+      id: "audiobook-publishing-services",
+
+      title: "Audiobook Publishing Services",
+
+      blocks: [
+        {
+          type: "paragraph",
+
+          text:
+            "Our audiobook publishing services can include:",
+        },
+
         {
           type: "bullets",
+
           items: [
-            "Initial discussion and project assessment.",
-            "Planning and development of the core material.",
-            "Refinement for clarity, flow and consistency.",
-            "Review against your brief and intended audience.",
-            "Final preparation and agreed revisions.",
+            "Narrator selection or coaching",
+
+            "Recording and editing coordination",
+
+            "Audio mastering and quality checks",
+
+            "Retail-ready file preparation",
+
+            "Platform setup and distribution guidance",
           ],
         },
       ],
     },
 
     {
-      id: "ebook-process",
-      title: "A Collaborative Process",
-      blocks: [
-        {
-          type: "heading",
-          text: "Understand the Brief",
-        },
-        {
-          type: "paragraph",
-          text: "We learn about your objectives, audience, preferred style and any references or existing material relevant to your eBook publishing project.",
-        },
-        {
-          type: "heading",
-          text: "Create a Practical Plan",
-        },
-        {
-          type: "paragraph",
-          text: "We outline the scope, milestones and expected deliverables so you know what will happen and when.",
-        },
-        {
-          type: "heading",
-          text: "Develop and Refine",
-        },
-        {
-          type: "paragraph",
-          text: "The work is developed in stages, with attention to feedback, consistency and the requirements agreed at the start.",
-        },
-        {
-          type: "heading",
-          text: "Review and Deliver",
-        },
-        {
-          type: "paragraph",
-          text: "We complete a final review and prepare the agreed files or materials for handover.",
-        },
-      ],
-    },
+      id: "why-choose-wordsmith-squad",
 
-    {
-      id: "ebook-audience",
-      title: "Who Can Benefit from eBook Publishing?",
+      title: "Why Choose Wordsmith Squad",
+
       blocks: [
-        {
-          type: "paragraph",
-          text: "This service can support first-time creators, experienced professionals, independent authors, businesses and organizations. The approach changes according to the subject, complexity and intended use of the work.",
-        },
         {
           type: "bullets",
+
           items: [
-            "First-time authors developing their first eBook.",
-            "Independent writers preparing digital publications.",
-            "Professionals sharing their knowledge and expertise.",
-            "Businesses developing digital publications.",
-            "Organizations creating educational resources.",
+            "Digital and audio expertise in one place",
+
+            "Quality checks on every file",
+
+            "You keep your rights",
+
+            "Clear guidance on platform choices",
+
+            "Strict confidentiality",
           ],
         },
       ],
     },
 
     {
-      id: "ebook-contact",
-      title: "Ready to Discuss Your Project?",
+      id: "ready-to-publish",
+
+      title:
+        "Ready to Publish Your E-book or Audiobook?",
+
       blocks: [
         {
           type: "paragraph",
-          text: "Every project begins with a conversation. Tell us what you are creating, what stage you have reached and what outcome you have in mind. We can then discuss a suitable way forward for your eBook publishing needs.",
-        },
-        {
-          type: "callout",
-          title: "Your Ideas. Our Publishing Expertise.",
-          text: "Let's work together to turn your ideas into a professionally prepared digital publication.",
+
+          text:
+            "Get a Free Quote",
         },
       ],
     },
@@ -162,29 +228,27 @@ const page: PublishingPageContent = {
 
   faqs: [
     {
-      question: "What is included in eBook Publishing?",
+      question:
+        "Can I turn my existing book into an audiobook?",
+
       answer:
-        "The scope depends on your brief and project goals. We discuss the required deliverables, timeline and level of support before work begins.",
+        "Yes. Most audiobooks are made from books already published in print or e-book form.",
     },
+
     {
-      question: "Can the service be tailored to my project?",
+      question:
+        "Should I narrate my own audiobook?",
+
       answer:
-        "Yes. We shape the process around your subject, audience, preferred style and the materials you provide.",
+        "It depends. Authors often narrate memoirs and personal books well, but a professional is usually better for long, character-driven fiction.",
     },
+
     {
-      question: "Can I provide my own notes or draft?",
+      question:
+        "How long does it take to produce an audiobook?",
+
       answer:
-        "Absolutely. Existing drafts, outlines, research, notes and reference materials can help guide the work.",
-    },
-    {
-      question: "How long does the process take?",
-      answer:
-        "Timing depends on the length, complexity and scope of the project. We agree on a realistic schedule after reviewing your requirements.",
-    },
-    {
-      question: "Will my project details be kept private?",
-      answer:
-        "We treat client materials and project information with care and discuss confidentiality expectations as part of the project.",
+        "It depends on length and narration.",
     },
   ],
 };

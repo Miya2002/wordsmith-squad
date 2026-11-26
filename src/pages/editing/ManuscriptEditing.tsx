@@ -1,19 +1,293 @@
-import EditingSubpageLayout, { type EditingPageData } from "@/pages/editing/EditingSubpageLayout";
+
+import EditingSubpageLayout, {
+  type EditingPageData,
+} from "@/pages/editing/EditingSubpageLayout";
+
 import { EDITORIAL } from "@/lib/data";
 
-// Separate content file for this subpage. Update this data without affecting its main page or other subpages.
+/**
+ * WORDSMITH SQUAD
+ * Manuscript Editing
+ *
+ * Approved SEO Content Source:
+ * Wordssmith Squad SEO for website.pdf
+ * Pages 32–35
+ *
+ * Existing layout, image, styling, animations
+ * and reusable components remain unchanged.
+ */
+
 const data: EditingPageData = {
- title: 'Manuscript Editing',
- subtitle: 'Professional Manuscript Editing Services',
- number: '01',
- image: EDITORIAL.desk,
- imageAlt: 'Editorial workspace for Manuscript Editing',
- accent: "gold",
- description: 'Manuscript Editing support shaped around your project, audience and publishing goals.',
- sections: [{"heading": "Explore Manuscript Editing", "paragraphs": ["Manuscript Editing calls for more than a one-size-fits-all approach. The right decisions depend on the purpose of your project, the people you want to reach and the experience you want them to have.", "At Wordsmith Squad, we begin by understanding your brief, source material and expectations. We then shape a practical plan that keeps the work aligned with your voice while giving the final result clarity, structure and consistency.", "Whether you are starting with an early idea or refining an established project, our manuscript editing service is designed to make the next steps easier to understand and manage."]}, {"heading": "Why Manuscript Editing Matters", "paragraphs": ["A well-planned manuscript editing project gives your ideas a stronger foundation. It helps establish a clear direction, reduces avoidable revisions and makes the final work more useful to its intended audience.", "We pay attention to the details that influence quality: purpose, tone, structure, accuracy, consistency and presentation. Each decision is considered in the context of your specific brief."], "bullets": ["A clear direction based on your goals and audience.", "A structure that makes information easy to follow.", "Consistent tone, terminology and presentation.", "Thoughtful review at important project stages.", "A final result prepared around the agreed requirements."]}, {"heading": "What Our Manuscript Editing Service Can Include", "paragraphs": ["The scope is tailored to the type of material you are developing. We discuss the deliverables with you before work begins so the project has a shared and realistic direction."], "bullets": ["Initial discussion and project assessment.", "Planning and development of the core material.", "Refinement for clarity, flow and consistency.", "Review against your brief and intended audience.", "Final preparation and agreed revisions."]}, {"heading": "A Collaborative Process", "subsections": [{"heading": "Understand the Brief", "paragraphs": ["We learn about your objectives, audience, preferred style and any references or existing material relevant to your manuscript editing project."]}, {"heading": "Create a Practical Plan", "paragraphs": ["We outline the scope, milestones and expected deliverables so you know what will happen and when."]}, {"heading": "Develop and Refine", "paragraphs": ["The work is developed in stages, with attention to feedback, consistency and the requirements agreed at the start."]}, {"heading": "Review and Deliver", "paragraphs": ["We complete a final review and prepare the agreed files or materials for handover."]}]}, {"heading": "Who Can Benefit from Manuscript Editing?", "paragraphs": ["This service can support first-time creators, experienced professionals, independent authors, businesses and organizations. The approach changes according to the subject, complexity and intended use of the work."]}, {"heading": "Ready to Discuss Your Project?", "paragraphs": ["Every project begins with a conversation. Tell us what you are creating, what stage you have reached and what outcome you have in mind. We can then discuss a suitable way forward for your manuscript editing needs."]}],
- faqs: [{"question": "What is included in Manuscript Editing?", "answer": "The scope depends on your brief and project goals. We discuss the required deliverables, timeline and level of support before work begins."}, {"question": "Can the service be tailored to my project?", "answer": "Yes. We shape the process around your subject, audience, preferred style and the materials you provide."}, {"question": "Can I provide my own notes or draft?", "answer": "Absolutely. Existing drafts, outlines, research, notes and reference materials can help guide the work."}, {"question": "How long does the process take?", "answer": "Timing depends on the length, complexity and scope of the project. We agree on a realistic schedule after reviewing your requirements."}, {"question": "Will my project details be kept private?", "answer": "We treat client materials and project information with care and discuss confidentiality expectations as part of the project."}]
+  title: "Manuscript Editing",
+
+  subtitle:
+    "Professional Book Editing Services for Authors in the USA",
+
+  number: "01",
+
+  image: EDITORIAL.desk,
+
+  imageAlt: "Editorial workspace for Manuscript Editing",
+
+  accent: "gold",
+
+  description:
+    "Every strong book has been edited, often several times. Editing is what turns a good draft into a book that readers finish, recommend and review well. At Wordsmith Squad, our editors work with you at every stage, from big-picture story and structure to the last comma. You stay in control of your voice and your book.",
+
+  sections: [
+    {
+      heading: "Book Editing Services",
+
+      paragraphs: [
+        "Our book editing services cover the complete path from rough draft to publish-ready manuscript. Not sure what your book needs? We review your manuscript and recommend the right level of editing, so you only pay for what will make a difference.",
+      ],
+    },
+
+    {
+      heading: "Manuscript Editing",
+
+      paragraphs: [
+        "Manuscript editing improves your book at every level: story, structure, style, grammar and consistency. We read your work the way a reader and an agent would, flag what is weakening it and fix problems while keeping your voice intact.",
+      ],
+    },
+
+    {
+      heading: "Manuscript Editing Services",
+
+      paragraphs: [
+        "Our manuscript editing services are built for authors preparing to self-publish, submit to agents or send work to a traditional publisher. We give you a clean, professional manuscript that makes a strong first impression.",
+      ],
+    },
+
+    {
+      heading: "Developmental Editing",
+
+      paragraphs: [
+        "Developmental editing looks at the big picture. We examine plot, pacing, structure, character development, argument flow and whether your book delivers on its promise.",
+
+        "This is the first stage of editing and often the most valuable, because it catches problems that no amount of polishing can fix later.",
+
+        "You receive: A detailed editorial letter, notes throughout the manuscript and practical advice on revisions.",
+      ],
+    },
+
+    {
+      heading: "Developmental Editor",
+
+      paragraphs: [
+        "Working with a developmental editor is like having an experienced partner for your book. Our editors give honest, constructive feedback, explain the reasons behind each suggestion and help you see your manuscript through a reader’s eyes. They guide you without rewriting your story.",
+      ],
+    },
+
+    {
+      heading: "Line Editing",
+
+      paragraphs: [
+        "Line editing works at the sentence and paragraph level. We refine flow, rhythm, word choice, tone and clarity so your prose reads smoothly and sounds like the best version of you.",
+
+        "If your story is strong but the writing feels uneven, this is the stage for you.",
+      ],
+    },
+
+    {
+      heading: "Copy Editing",
+
+      paragraphs: [
+        "Copy editing corrects grammar, spelling, punctuation, usage and consistency. We check names, timelines, capitalization, hyphenation and style, following standards such as the Chicago Manual of Style, the usual standard for US book publishing.",
+      ],
+    },
+
+    {
+      heading: "Copyediting Services",
+
+      paragraphs: [
+        "Our copyediting services give your manuscript the technical polish readers and reviewers expect. Errors in a published book can cost you reviews and credibility, and professional copyediting prevents that.",
+      ],
+    },
+
+    {
+      heading: "Fiction Editing Services",
+
+      paragraphs: [
+        "Our fiction editing services help novelists strengthen plot, pacing, dialogue, point of view and character arcs.",
+
+        "We edit across genres, including romance, fantasy, thriller, mystery and literary fiction, with an editor who understands what your readers expect.",
+      ],
+    },
+
+    {
+      heading: "Memoir Editing",
+
+      paragraphs: [
+        "Memoir editing takes special care. Your story is personal, and the edit should protect your voice and honesty while strengthening the structure and emotional impact.",
+
+        "We help you decide what belongs in the book, tighten the narrative and make your real experience land with readers.",
+      ],
+    },
+
+    {
+      heading: "Book Editor for Hire",
+
+      paragraphs: [
+        "Looking for a book editor for hire? Wordsmith Squad matches you with an editor who knows your genre, understands your goals and respects your voice.",
+
+        "We work on novels, memoirs, business books, self-help, children’s books and more, and we are happy to start with a sample edit.",
+      ],
+    },
+
+    {
+      heading: "Which Type of Editing Do You Need?",
+
+      paragraphs: [
+        "Most books benefit from all three stages in this order. If you are unsure, we are happy to advise.",
+      ],
+
+      subsections: [
+        {
+          heading: "Developmental Editing",
+
+          paragraphs: [
+            "What it fixes: Structure, plot, pacing, argument.",
+
+            "Best for: First or early drafts.",
+          ],
+        },
+
+        {
+          heading: "Line Editing",
+
+          paragraphs: [
+            "What it fixes: Style, flow, tone, sentence quality.",
+
+            "Best for: Strong drafts with uneven prose.",
+          ],
+        },
+
+        {
+          heading: "Copy Editing",
+
+          paragraphs: [
+            "What it fixes: Grammar, punctuation, consistency.",
+
+            "Best for: Nearly finished manuscripts.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "How It Works",
+
+      subsections: [
+        {
+          heading:
+            "01. Free Consultation and Manuscript Review",
+
+          paragraphs: [
+            "Tell us about your book and goals.",
+          ],
+        },
+
+        {
+          heading: "02. Editor Match",
+
+          paragraphs: [
+            "We pair you with an editor suited to your genre.",
+          ],
+        },
+
+        {
+          heading: "03. Editing",
+
+          paragraphs: [
+            "Your editor works through the manuscript at the agreed level.",
+          ],
+        },
+
+        {
+          heading: "04. Review and Revisions",
+
+          paragraphs: [
+            "You review the changes and notes and ask questions.",
+          ],
+        },
+
+        {
+          heading: "05. Final Manuscript",
+
+          paragraphs: [
+            "You receive a polished manuscript, ready for the next step.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Why Choose Wordsmith Squad",
+
+      bullets: [
+        "Experienced editors matched to your genre",
+
+        "Your voice protected, never replaced",
+
+        "Clear, constructive feedback you can act on",
+
+        "Strict confidentiality through a signed NDA",
+
+        "Full ownership of your manuscript",
+
+        "Built for US publishing standards and American English",
+      ],
+    },
+
+    {
+      heading: "Ready to Get Your Manuscript Edited?",
+
+      paragraphs: [
+        "Get a Free Editing Quote",
+      ],
+    },
+  ],
+
+  faqs: [
+    {
+      question:
+        "What is the difference between developmental editing, line editing and copy editing?",
+
+      answer:
+        "Developmental editing fixes the big picture, line editing improves sentences and style, and copy editing corrects grammar and consistency.",
+    },
+
+    {
+      question: "How long does editing take?",
+
+      answer:
+        "It depends on length and editing level.",
+    },
+
+    {
+      question: "Will you change my writing style?",
+
+      answer:
+        "No. We improve clarity and flow while keeping your voice.",
+    },
+
+    {
+      question: "Do you offer proofreading?",
+
+      answer:
+        "Proofreading is the final check after formatting.",
+    },
+
+    {
+      question: "How much does editing cost?",
+
+      answer:
+        "Pricing depends on word count and editing type.",
+    },
+  ],
 };
 
 export default function ManuscriptEditing() {
- return <EditingSubpageLayout data={data} />;
+  return <EditingSubpageLayout data={data} />;
 }

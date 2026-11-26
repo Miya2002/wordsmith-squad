@@ -1,21 +1,231 @@
+
 import GhostwritingSubpageLayout, {
   type EditingPageData,
 } from "@/pages/ghostwriting/GhostwritingSubpageLayout";
+
 import { EDITORIAL } from "@/lib/data";
 
-// Separate content file for this subpage. Update this data without affecting its main page or other subpages.
+/**
+ * WORDSMITH SQUAD
+ * Real Life Story Writing
+ *
+ * Content source:
+ * Wordssmith Squad SEO for website.pdf
+ * Pages 23–25
+ *
+ * Existing layout, animations, styling
+ * and image reference are retained.
+ */
+
 const data: EditingPageData = {
- title: 'Real Life Story Writing',
- subtitle: 'Professional Real Life Story Writing Services',
- number: '07',
- image: EDITORIAL.desk,
- imageAlt: 'Editorial workspace for Real Life Story Writing',
- accent: "gold",
- description: 'Real Life Story Writing support shaped around your project, audience and publishing goals.',
- sections: [{"heading": "Explore Real Life Story Writing", "paragraphs": ["Real Life Story Writing calls for more than a one-size-fits-all approach. The right decisions depend on the purpose of your project, the people you want to reach and the experience you want them to have.", "At Wordsmith Squad, we begin by understanding your brief, source material and expectations. We then shape a practical plan that keeps the work aligned with your voice while giving the final result clarity, structure and consistency.", "Whether you are starting with an early idea or refining an established project, our real life story writing service is designed to make the next steps easier to understand and manage."]}, {"heading": "Why Real Life Story Writing Matters", "paragraphs": ["A well-planned real life story writing project gives your ideas a stronger foundation. It helps establish a clear direction, reduces avoidable revisions and makes the final work more useful to its intended audience.", "We pay attention to the details that influence quality: purpose, tone, structure, accuracy, consistency and presentation. Each decision is considered in the context of your specific brief."], "bullets": ["A clear direction based on your goals and audience.", "A structure that makes information easy to follow.", "Consistent tone, terminology and presentation.", "Thoughtful review at important project stages.", "A final result prepared around the agreed requirements."]}, {"heading": "What Our Real Life Story Writing Service Can Include", "paragraphs": ["The scope is tailored to the type of material you are developing. We discuss the deliverables with you before work begins so the project has a shared and realistic direction."], "bullets": ["Initial discussion and project assessment.", "Planning and development of the core material.", "Refinement for clarity, flow and consistency.", "Review against your brief and intended audience.", "Final preparation and agreed revisions."]}, {"heading": "A Collaborative Process", "subsections": [{"heading": "Understand the Brief", "paragraphs": ["We learn about your objectives, audience, preferred style and any references or existing material relevant to your real life story writing project."]}, {"heading": "Create a Practical Plan", "paragraphs": ["We outline the scope, milestones and expected deliverables so you know what will happen and when."]}, {"heading": "Develop and Refine", "paragraphs": ["The work is developed in stages, with attention to feedback, consistency and the requirements agreed at the start."]}, {"heading": "Review and Deliver", "paragraphs": ["We complete a final review and prepare the agreed files or materials for handover."]}]}, {"heading": "Who Can Benefit from Real Life Story Writing?", "paragraphs": ["This service can support first-time creators, experienced professionals, independent authors, businesses and organizations. The approach changes according to the subject, complexity and intended use of the work."]}, {"heading": "Ready to Discuss Your Project?", "paragraphs": ["Every project begins with a conversation. Tell us what you are creating, what stage you have reached and what outcome you have in mind. We can then discuss a suitable way forward for your real life story writing needs."]}],
- faqs: [{"question": "What is included in Real Life Story Writing?", "answer": "The scope depends on your brief and project goals. We discuss the required deliverables, timeline and level of support before work begins."}, {"question": "Can the service be tailored to my project?", "answer": "Yes. We shape the process around your subject, audience, preferred style and the materials you provide."}, {"question": "Can I provide my own notes or draft?", "answer": "Absolutely. Existing drafts, outlines, research, notes and reference materials can help guide the work."}, {"question": "How long does the process take?", "answer": "Timing depends on the length, complexity and scope of the project. We agree on a realistic schedule after reviewing your requirements."}, {"question": "Will my project details be kept private?", "answer": "We treat client materials and project information with care and discuss confidentiality expectations as part of the project."}]
+  title: "Real Life Story Writing",
+
+  subtitle:
+    "Memoir, Biography & Self-Help Writing Services",
+
+  number: "07",
+
+  image: EDITORIAL.desk,
+
+  imageAlt:
+    "Editorial workspace for Real Life Story Writing",
+
+  accent: "gold",
+
+  description:
+    "Some of the most powerful books come from real experience. At Wordsmith Squad, we help people capture their stories and share their knowledge in books that readers trust. You keep the credit and the rights, and we handle the writing.",
+
+  sections: [
+    {
+      heading:
+        "Turning Real Lives and Real Expertise Into Powerful Books",
+
+      paragraphs: [
+        "Some of the most powerful books come from real experience. At Wordsmith Squad, we help people capture their stories and share their knowledge in books that readers trust. You keep the credit and the rights, and we handle the writing.",
+      ],
+    },
+
+    {
+      heading: "Real Life Story Writing",
+
+      paragraphs: [
+        "You don’t need to be famous to have a story worth reading. Our real life story writing service is for everyday people with remarkable experiences: survival, love, loss, faith, immigration, recovery, success.",
+
+        "We shape your experience into a book with a clear arc and real heart.",
+      ],
+    },
+
+    {
+      heading: "Memoir Writing Services",
+
+      paragraphs: [
+        "Our memoir writing services help you turn your memories into a story with emotion, structure and purpose.",
+
+        "We interview you, organize your key moments and write in a voice that sounds like you.",
+
+        "Memoirs work well for family legacies, overcoming hardship, career journeys and personal transformation.",
+      ],
+    },
+
+    {
+      heading: "Autobiography Writing Services",
+
+      paragraphs: [
+        "Want the full story of your life? Our autobiography writing services cover your whole journey, from early years to today, in a well-paced narrative.",
+
+        "We help you decide what to include, what to leave out and how to tell it honestly.",
+      ],
+    },
+
+    {
+      heading: "Biography Writing Services",
+
+      paragraphs: [
+        "Writing about someone else’s life takes research and care. Our biography writing services cover founders, community leaders, family members, and public figures.",
+
+        "We gather interviews, records and details to tell an accurate, engaging story.",
+      ],
+    },
+
+    {
+      heading: "Biography Writers for Hire",
+
+      paragraphs: [
+        "Looking for biography writers for hire? Our writers handle everything from a short tribute book to a full-length biography.",
+
+        "Whether the subject is a loved one, a business leader or a historical figure, we build the book around what makes the person memorable.",
+      ],
+    },
+
+    {
+      heading: "Self Help Book Writing",
+
+      paragraphs: [
+        "If your work helps people change their lives, a book extends your reach.",
+
+        "Our self help book writing service turns your method, lessons and client stories into clear, practical, encouraging chapters.",
+
+        "Ideal for coaches, therapists, speakers and wellness experts.",
+      ],
+    },
+
+    {
+      heading: "Business Book Writing",
+
+      paragraphs: [
+        "A book is one of the strongest credibility tools for a professional.",
+
+        "Our business book writing service transforms your frameworks, case studies and experience into a book that attracts clients, speaking invitations and press.",
+      ],
+    },
+
+    {
+      heading: "Our Process",
+
+      subsections: [
+        {
+          heading: "01. Free Consultation",
+
+          paragraphs: [
+            "Tell us about your story or message.",
+          ],
+        },
+
+        {
+          heading: "02. Writer Match",
+
+          paragraphs: [
+            "We pair you with a writer who suits your subject and style.",
+          ],
+        },
+
+        {
+          heading: "03. Interviews and Outline",
+
+          paragraphs: [
+            "We gather your story and plan the book.",
+          ],
+        },
+
+        {
+          heading: "04. Drafting and Review",
+
+          paragraphs: [
+            "You read, comment and guide the direction.",
+          ],
+        },
+
+        {
+          heading: "05. Final Manuscript",
+
+          paragraphs: [
+            "You receive a polished, publish-ready book.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Why Authors Choose Us",
+
+      bullets: [
+        "Your voice on every page",
+
+        "Full ownership and credit",
+
+        "Total confidentiality with an NDA",
+
+        "Sensitive handling of personal and emotional stories",
+
+        "Clear communication from start to finish",
+      ],
+    },
+
+    {
+      heading: "Ready to Tell Your Story?",
+
+      paragraphs: [
+        "Book Your Free Consultation",
+      ],
+    },
+  ],
+
+  faqs: [
+    {
+      question:
+        "Do I need to be a good writer to write a memoir?",
+
+      answer:
+        "No. You share the story through interviews or notes, and we write it.",
+    },
+
+    {
+      question:
+        "Can you write a book about someone else, like a parent or founder?",
+
+      answer:
+        "Yes. We write tribute books and biographies and can interview family, friends and colleagues.",
+    },
+
+    {
+      question:
+        "Can you include difficult or private moments?",
+
+      answer:
+        "Yes. We handle sensitive topics with care, and you control what stays in the book.",
+    },
+
+    {
+      question: "What does it cost?",
+
+      answer:
+        "It depends on length and research.",
+    },
+  ],
 };
 
 export default function RealLifeStoryWriting() {
-return <GhostwritingSubpageLayout data={data} />;}
-
+  return (
+    <GhostwritingSubpageLayout data={data} />
+  );
+}
