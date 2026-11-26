@@ -7,14 +7,16 @@
         "dev": "vite",
         "dev:vercel": "vercel dev",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "start": "node server.cjs"
     },
     "dependencies": {
         "clsx": "2.1.1",
+        "express": "^4.22.3",
         "react": "19.2.6",
         "react-dom": "19.2.6",
         "react-router-dom": "^7.18.5",
-        "resend": "^6.38.1",
+        "resend": "^6.40.0",
         "tailwind-merge": "3.4.0"
     },
     "devDependencies": {

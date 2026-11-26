@@ -81,9 +81,7 @@ const PHONE_RE =
 // The Vercel domain must be replaced with your actual deployment.
 // The URL is public and contains no secret keys.
 
-const CONTACT_API_URL = (
-  import.meta.env.VITE_CONTACT_API_URL || ""
-).trim();
+const CONTACT_API_URL = "/api/contact";
 
 function validate(d: ContactFormData): FieldErrors {
   const errors: FieldErrors = {};
